@@ -20,7 +20,8 @@ export class ReportViewerComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(questionRoute => {
       this.reportId = questionRoute['reportId'];
-      this.backendService.getExistingReport(this.reportId).subscribe(er => {
+      this.backendService.getExistingReport(this.reportId).subscribe( existingReport => {
+        this.existingReport = existingReport.reportData;
         this.backendService.getQuestionData(this.existingReport.questionId + '')
           .subscribe(questionDetails => {this.questionDetails = questionDetails; });
       });
