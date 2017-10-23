@@ -1,0 +1,36 @@
+{
+  "error": null,
+  "questionData": {
+    "id": "818",
+    "examId": "3",
+    "examPartId": "5",
+    "name": "Mi az infimum defin\u00edci\u00f3ja?",
+    "qNum": "8",
+    "weight": "0",
+    "questionPic": true,
+    "solPic": false,
+    "solPdf": false,
+    "solHtml": "Lófasz"
+  },
+  "examPartDetails": {
+    "id": "5",
+    "examId": "3",
+    "name": "T\u00e9telkimond\u00e1sok",
+    "prettyImages": false,
+    "fullWidth": false,
+    "ordering": "1",
+    "customWeight": "0"
+  },
+  "subjectDetails": {
+    "id": "3",
+    "groupId": "2",
+    "name": "Anal\u00edzis 1.",
+    "auditor": "Dr. Simon P\u00e9ter",
+    "semester": "2012-2013-2",
+    "link": "nuan1simon",
+    "website": "http:\/\/numanal.inf.elte.hu\/~simon\/",
+    "isHidden": "0",
+    "folder": "Anal1_Simon",
+    "icon": "primas"
+  }
+}

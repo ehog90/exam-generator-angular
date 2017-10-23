@@ -1,0 +1,75 @@
+<div class="row toolbar">
+  <div class="col-md-12">
+    <ng-template [ngIf]="!deviceService.isAppleIos">
+      <a class="examIcon" [tooltip]="question.displayed ? 'Válasz elrejtése' : 'Válasz megtekintése'"
+         placement="right"
+         (click)="toggleAnswer(); $event.stopPropagation();" *ngIf="(question.solPic || question.solHtml) && !hideExpandButton">
+        <i class="toolbar-glyph" [ngClass]="{'szemlelet-bulb-off': question.displayed, 'szemlelet-bulb': !question.displayed}" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon" tooltip="Megoldás PDF-ben"
+         placement="right"
+         href="./data/pdf/{{question.id}}_pdf.pdf" target="_blank"
+         *ngIf="question.solPdf">
+        <i class="toolbar-glyph szemlelet-pdf" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon" [tooltip]="question.testFieldDisplayed ? 'Tesztmező elrejtése': 'Tesztmező'"
+         placement="right"
+         (click)="toggleTestField(); $event.stopPropagation();" *ngIf="!hideTestField">
+        <i class="toolbar-glyph" [ngClass]="{'szemlelet-keypad-off': question.testFieldDisplayed, 'szemlelet-keypad': !question.testFieldDisplayed}" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon" [tooltip]="known ? 'Mégsem tudom :(' : 'Megtanultam!'"
+         (click)="knowledgeChange.emit(question.id); $event.stopPropagation();"
+         placement="right">
+        <i class="toolbar-glyph" [ngClass]="{'szemlelet-unchecked': known, 'szemlelet-checked': !known}" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon" tooltip="Megoldási javaslat"
+         placement="right"
+         (click)="openReport.emit(question.id); $event.stopPropagation();"
+         *ngIf="!(question.solPic || question.solHtml) && !question.solPdf">
+        <i class="toolbar-glyph szemlelet-suggest" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon" tooltip="Hibajelentés"
+         (click)="openReport.emit(question.id); $event.stopPropagation();"
+         placement="right"
+         *ngIf="(question.solPic || question.solHtml) || question.solPdf">
+        <i class="toolbar-glyph szemlelet-bug" aria-hidden="true"></i>
+      </a>
+    </ng-template>
+    <ng-template [ngIf]="deviceService.isAppleIos">
+      <a class="examIcon"
+         (click)="toggleAnswer(); $event.stopPropagation();" *ngIf="(question.solPic || question.solHtml) && !hideExpandButton">
+        <i class="toolbar-glyph" [ngClass]="{'szemlelet-bulb-off': question.displayed, 'szemlelet-bulb': !question.displayed}" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon"
+         href="./data/pdf/{{question.id}}_pdf.pdf" target="_blank"
+         *ngIf="question.solPdf">
+        <i class="toolbar-glyph szemlelet-pdf" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon"
+         (click)="toggleTestField(); $event.stopPropagation();" *ngIf="!hideTestField">
+        <i class="toolbar-glyph" [ngClass]="{'szemlelet-keypad-off': question.testFieldDisplayed, 'szemlelet-keypad': !question.testFieldDisplayed}" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon"
+         (click)="knowledgeChange.emit(question.id); $event.stopPropagation();">
+        <i class="toolbar-glyph" [ngClass]="{'szemlelet-unchecked': known, 'szemlelet-checked': !known}" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon"
+         (click)="openReport.emit(question.id); $event.stopPropagation();"
+         *ngIf="!(question.solPic || question.solHtml) && !question.solPdf">
+        <i class="toolbar-glyph szemlelet-suggest" aria-hidden="true"></i>
+      </a>
+      <a class="examIcon"
+         (click)="openReport.emit(question.id); $event.stopPropagation();"
+         *ngIf="(question.solPic || question.solHtml) || question.solPdf">
+        <i class="toolbar-glyph szemlelet-bug" aria-hidden="true"></i>
+      </a>
+    </ng-template>
+    <div class="pull-right">
+      <span *ngIf="known && !showExamData" class="i-know">Megtanultam!</span>
+      <span *ngIf="subject && showExamData" class="badge">{{subject.name}}</span>
+      <span *ngIf="subject && showExamData" class="badge">{{examPart.name}}</span>
+      <span class="badge" *ngIf="examPart.customWeight">{{question.weight}} pont</span>
+      <span class="badge" *ngIf="!showExamData && !hideQuestionNumber">{{question.number}}. kérdés</span>
+    </div>
+  </div>
+</div>

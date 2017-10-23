@@ -1,0 +1,54 @@
+<regor-page-header [title]="'Üzenet küldése'" [img]="'mail'"></regor-page-header>
+<form [formGroup]="messageForm" (ngSubmit)="submit()" style="margin-top: 10px; margin-bottom: 10px;">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group"
+           [ngClass]="{'has-error': messageForm.controls['email'].invalid && !messageForm.controls['email'].pristine}">
+        <label for="email">Valódi email</label>
+        <div class="input-group">
+          <span class="input-group-addon" id="email">@</span>
+          <input formControlName="email" type="email" class="form-control" aria-describedby="email">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group"
+           [ngClass]="{'has-error': messageForm.controls['name'].invalid && !messageForm.controls['name'].pristine}">
+        <label for="name">Név / Nick</label>
+        <input formControlName="name" type="text" class="form-control" id="name">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group"
+           [ngClass]="{'has-error': messageForm.controls['subject'].invalid && !messageForm.controls['subject'].pristine}">
+        <label for="subject">Tárgy</label>
+        <input formControlName="subject" type="text" class="form-control" id="subject">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group"
+       [ngClass]="{'has-error': messageForm.controls['message'].invalid && !messageForm.controls['message'].pristine}">
+    <label for="description">Üzenet</label>
+    <textarea formControlName="message" class="form-control form-group-sm" id="description" rows="5"></textarea>
+  </div>
+  <div class="form-group">
+    <div>
+      <re-captcha formControlName="reCaptcha" required
+                 [siteKey]="'6Lcn6hMTAAAAAD0d0d3cjQ1PjM0xoZzFoaj6GLdU'"></re-captcha>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-default" [disabled]="!messageForm.valid || isSending" (click)="submit()">
+    {{isSending? 'Küldés...': 'Elküld'}}
+  </button>
+  <div class="form-group" style="margin-top: 10px">
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-warning" *ngIf="error">
+        <strong>Hiba</strong>: {{error}}
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,35 @@
+<div *ngFor="let announcement of announcements" >
+  <div class="alert alert-{{announcement.annClass}}" *ngIf="!announcement.dismissed" style="text-align: center">
+    <div class="row">
+      <div class="col-xs-11" [innerHTML]="announcement.content">
+      </div>
+      <div class="col-xs-1">
+        <button *ngIf="!deviceService.isAppleIos" class="btn btn-xs btn-{{announcement.annClass}} pull-right"
+                aria-hidden="true" style="cursor: pointer; color: white" tooltip="Elrejt" placement="left"
+                (click)="dismiss(announcement)">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+        <button *ngIf="deviceService.isAppleIos" class="btn btn-xs btn-{{announcement.annClass}} pull-right"
+                aria-hidden="true" style="cursor: pointer; color: white" (click)="dismiss(announcement)">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #changelogModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Legutóbbi változtatások</h4>
+        <span class="pull-right" (click)="changelogModal.hide()">
+          <img src="assets/img/close.svg" alt="close" />
+        </span>
+      </div>
+      <div class="modal-body" [innerHTML]="modalText">
+      </div>
+    </div>
+  </div>
+</div>

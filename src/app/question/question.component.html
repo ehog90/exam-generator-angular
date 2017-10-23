@@ -1,0 +1,20 @@
+<div class="question" [@knowledge]="known ? 'known': 'unknown'" (click)="toolbar.toggleAnswer(); $event.stopPropagation()">
+  <regor-question-toolbar #toolbar [question]="question" [examPart]="examPart"
+                          [known]="known"
+                          [hideTestField]="hideTestField"
+                          [subject]="subject"
+                          [showExamData]="showExamData"
+                          [hideExpandButton]="hideExpandButton"
+                          (knowledgeChange)="toggleKnowledge()"
+                          (openReport)="openReport.emit(question.id)"></regor-question-toolbar>
+  <regor-question-header [examPart]="examPart" [question]="question"></regor-question-header>
+  <!-- Ez a tesztmező. -->
+  <div style="margin-bottom: 3px; overflow: hidden"
+       [@visibility]="question.testFieldDisplayed? 'expanded': 'collapsed'">
+    <div>
+      <textarea class="form-control" rows="5" placeholder="Írd ide a választ!"></textarea>
+    </div>
+  </div>
+  <regor-question-answer [question]="question" [examPart]="examPart"
+                         [visible]="question.displayed || hideExpandButton"></regor-question-answer>
+</div>

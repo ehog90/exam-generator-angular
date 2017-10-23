@@ -1,0 +1,23 @@
+.col-sm-4.main-entry {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+@media (max-width: 1200px) {
+  .col-sm-4.main-entry {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-sm-4.main-entry {
+    width: 100%;
+  }
+}
+
+i.main-entry-glyph {
+  font-size: 42px;
+  line-height: 42px;
+  vertical-align: middle;
+  display: inline-block;
+}

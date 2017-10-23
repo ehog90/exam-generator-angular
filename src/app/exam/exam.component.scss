@@ -1,0 +1,6 @@
+div {
+  & >.exam-part {
+    border-bottom: 1px solid #f90;
+    padding-bottom: 5px;
+  }
+}

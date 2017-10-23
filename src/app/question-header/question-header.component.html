@@ -1,0 +1,7 @@
+<div style="padding-left: 4px; padding-right: 4px; padding-top: 2px;"
+     [ngClass]="{questionimg: true, qdiv: question.questionPic, pretty: examPart.prettyImages, full: examPart.fullWidth}">
+  <div>
+    <img src="/data/q/{{question.id}}_q.png" class="img-responsive" *ngIf="question.questionPic" [alt]="question.name"/>
+    <div *ngIf="!question.questionPic">{{question.name}}</div>
+  </div>
+</div>

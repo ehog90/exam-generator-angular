@@ -1,0 +1,80 @@
+<regor-page-header title="Keresés bármiben"
+                   img="magnifier"></regor-page-header>
+<div class="row search">
+  <div class="col-md-12">
+    <div class="input-group">
+                <span class="input-group-btn">
+           <button class="btn btn-default"><span class="glyphicon glyphicon-search"
+                                                 style="vertical-align: middle"> </span></button>
+      </span>
+      <input #searchStringDom type="search" class="form-control" placeholder="Kereséshez kezdj el gépelni…"
+             [value]="searchString"
+             (input)="searchObservable.next(searchStringDom.value)"/>
+      <span class="input-group-btn">
+           <button (click)="resetSearch(); searchStringDom.value = null" class="btn btn-default"><span
+             class="glyphicon glyphicon-trash" style="vertical-align: middle"> </span></button>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="button-toolbar">
+  <regor-icon-button glyphName="all-expand" (buttonClick)="toggleAutoExpand()">Automatikus kibontás {{!this.autoExpand ? 'ki': null}}</regor-icon-button>
+</div>
+<regor-busy-monitor #busyMonitor>
+  <div class="jumbotron" style="margin-top: 10px; text-align: center" *ngIf="result?.length == 0">
+    <div class="row">
+      <div class="col-md-12">
+        <img class="img-responsive" src="assets/img/magnifier.svg"
+             style="max-width: 140px; max-height: 140px; 	margin-left: auto; margin-right: auto;"/>
+        <h1>Nincs találat.</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 10px" *ngIf="result?.length > 0">
+    <div class="col-md-12">
+      <strong *ngIf="result?.length == resultLimit">Találatok száma: {{resultLimit}}. Érdemes a keresést
+        finomítani.</strong>
+      <strong *ngIf="result?.length < resultLimit">Találatok száma: {{result?.length}}.</strong>
+    </div>
+    <div class="col-md-12">
+      <regor-question
+        *ngFor="let r of result"
+        (openReport)="openReportModal($event)"
+        [question]="r.question"
+        [examPart]="r.examPart"
+        [showExamData]="true"
+        [hideTestField]="true"
+        [hideExpandButton]="!autoExpand"
+        [subject]="r.subject"></regor-question>
+    </div>
+  </div>
+</regor-busy-monitor>
+
+<div class="jumbotron" style="margin-top: 10px; text-align: center" *ngIf="!searchInitiated && !result">
+  <div class="row">
+    <div class="col-md-12">
+      <img class="img-responsive" src="assets/img/magnifier.svg"
+           style="max-width: 140px; max-height: 140px; 	margin-left: auto; margin-right: auto;"/>
+      <h1>Keresés</h1>
+      <h3>Az összes tárgy összes tétele között.</h3>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" bsModal #reportModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Hibajelentés / Megoldási javaslat</h4>
+        <span class="pull-right" (click)="reportModal.hide()">
+          <img src="assets/img/close.svg" alt="close"/>
+        </span>
+      </div>
+      <div class="modal-body">
+        <div class="row" #modalTarget>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

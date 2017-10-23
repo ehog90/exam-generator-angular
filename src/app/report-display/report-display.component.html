@@ -1,0 +1,58 @@
+<div class="report-headers" *ngIf="questionDetails">
+  <div class="row">
+    <div class="col-md-2 strong">
+      Tárgy
+    </div>
+    <div class="col-md-10">
+      {{questionDetails.subjectDetails.name}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 strong">
+      Előadó
+    </div>
+    <div class="col-md-10">
+      {{questionDetails.subjectDetails.auditor}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 strong">
+      Szemeszter
+    </div>
+    <div class="col-md-10">
+      {{questionDetails.subjectDetails.semester}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 strong">
+      Vizsgarész
+    </div>
+    <div class="col-md-10">
+      {{questionDetails.examPartDetails.name}}
+    </div>
+  </div>
+  <div class="row" style="background-color: rgba(0,0,0,0.6)">
+    <div class="col-md-2 strong">
+      Kérdés
+    </div>
+    <div class="col-md-10">
+      <regor-question-header [question]="questionDetails.questionData" [examPart]="questionDetails.examPartDetails"></regor-question-header>
+    </div>
+  </div>
+  <div class="row" style="background-color: rgba(0,0,0,0.6)">
+    <div class="col-md-2 strong">
+      Válasz
+    </div>
+    <div class="col-md-10">
+      <regor-question-answer [question]="questionDetails.questionData" [examPart]="questionDetails.examPartDetails" [visible]="true"></regor-question-answer>
+    </div>
+  </div>
+  <div class="row" *ngIf="questionDetails.questionData.solPdf">
+    <div class="col-md-2 strong">
+      PDF
+    </div>
+    <div class="col-md-10">
+      <a class="btn btn-default" href="./data/pdf/{{questionData.questionData.question_id}}_pdf.pdf" target="_blank">Megnyitás</a>
+    </div>
+  </div>
+</div>

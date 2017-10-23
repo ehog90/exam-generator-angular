@@ -1,0 +1,187 @@
+{
+  "error": "none",
+  "exam": [
+    {
+
+      "examPartId": "5",
+      "id": "3",
+      "name": "T\u00e9telkimond\u00e1sok",
+      "qNum": "15",
+      "prettyImages": false,
+      "fullWidth": false,
+      "ordering": "1",
+      "customWeight": false,
+      "error": "none",
+      "count": 179,
+      "selectedOnes": [
+        {
+          "id": "816",
+          "number": "6",
+          "name": "\u00cdrja le a fels\u0151 hat\u00e1r axi\u00f3m\u00e1t!",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "833",
+          "number": "23",
+          "name": "Hogyan \u00e9rtelmezi a f\u00fcggv\u00e9nyt?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "845",
+          "number": "35",
+          "name": "Hogyan \u00e9rtelmezi k\u00e9t (val\u00f3s vagy komplex \u00e9rt\u00e9k\u0171) f\u00fcggv\u00e9ny h\u00e1nyados\u00e1t?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "849",
+          "number": "39",
+          "name": "Mit \u00e9rt azon, hogy egy egyv\u00e1ltoz\u00f3s val\u00f3s f\u00fcggv\u00e9ny monoton fogy\u00f3?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "866",
+          "number": "56",
+          "name": "Mit tud mondani konvergens sorozatok r\u00e9szsorozatair\u00f3l?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "875",
+          "number": "65",
+          "name": "Milyen \u00e1ll\u00edt\u00e1st ismer konvergens sorozatok szorzat\u00e1r\u00f3l?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "890",
+          "number": "80",
+          "name": "Mi a kapcsolat a konvergencia \u00e9s a hat\u00e1r\u00e9rt\u00e9k szempontj\u00e1b\u00f3l az (x_n), (|x_n|) : N \u2192 K sorozatok k\u00f6z\u00f6tt?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "902",
+          "number": "92",
+          "name": "Milyen konvergencia-t\u00e9telt tanult az n.gy\u00f6kalatt(a) (a > 0) sorozatr\u00f3l?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "915",
+          "number": "103",
+          "name": "Hogyan sz\u00f3l v\u00e9gtelen sorokkal kapcsolatban az \u00f6sszehasonl\u00edt\u00f3 krit\u00e9rium?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "925",
+          "number": "113",
+          "name": "Milyen t\u00e9telt ismer abszol\u00fat konvergens sorok \u00e1trendez\u00e9seit illet\u0151en?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "937",
+          "number": "125",
+          "name": "Legyen 2 \u2264 p \u2208 N. Mondjon olyan \u03b1 \u2208 [0, 1) sz\u00e1mot, amelyre alkalmas, egym\u00e1st\u00f3l k\u00fcl\u00f6nb\u00f6z\u0151 (x_n), (y_n) : N \u2192 {0, ..., p \u2212 1} sorozatokkal \u03b1 = \u2211(k=0..\u221e)(x_k)\/(p^(k+1)) = \u2211(k=0..\u221e)(y_k)\/(p^(k+1))!",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "943",
+          "number": "131",
+          "name": "Milyen \u00e1ll\u00edt\u00e1st ismer a hatv\u00e1nysorok k\u00f6z\u00e9ppontj\u00e1nak az eltol\u00e1s\u00e1ra vonatkoz\u00f3an?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "957",
+          "number": "145",
+          "name": "Adja meg egyenl\u0151tlens\u00e9gek seg\u00edts\u00e9g\u00e9vel a v\u00e9gesben vett m\u00ednusz v\u00e9gtelen hat\u00e1r\u00e9rt\u00e9k defin\u00edci\u00f3j\u00e1t!",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "969",
+          "number": "156",
+          "name": "Milyen t\u00e9telt ismer hatv\u00e1nysor \u00f6sszegf\u00fcggv\u00e9ny\u00e9nek a hat\u00e1r\u00e9rt\u00e9k\u00e9r\u0151l?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "987",
+          "number": "174",
+          "name": "Mivel egyenl\u0151 a  \u03b4n := e \u2212 \u2211(k=0..n)(1\/k!) (0 < n \u2208 N) k\u00fcl\u00f6nbs\u00e9g?",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        }
+      ]
+    },
+    {
+      "examPartId": "6",
+      "id": "3",
+      "name": "Bizony\u00edt\u00e1sok",
+      "qNum": "2",
+      "prettyImages": false,
+      "fullWidth": false,
+      "ordering": "2",
+      "customWeight": false,
+      "error": "none",
+      "count": 57,
+      "selectedOnes": [
+        {
+          "id": "1290",
+          "number": "24",
+          "name": "szigor\u00faan monoton n\u00f6v\u0151 \u00e9s fel\u00fclr\u0151l korl\u00e1tos",
+          "questionPic": true,
+          "solPic": true,
+          "solPdf": false,
+          "weight": "0"
+        },
+        {
+          "id": "1306",
+          "number": "40",
+          "name": "tetsz\u0151leges 0 1",
+          "questionPic": true,
+          "solPic": false,
+          "solPdf": false,
+          "solHtml": "<b>Anyád</b> hogy van? "
+        }
+      ]
+    }
+  ]
+}

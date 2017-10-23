@@ -1,0 +1,20 @@
+<div class="panel-group" *ngIf="files && files.length > 0">
+  <div class="panel panel-default">
+    <div class="panel-heading" (click)="toggle()" style="cursor: pointer">
+      <h4 class="panel-title">
+        <a>{{header}}</a>
+        <i class="pull-right glyphicon glyphicon-chevron-up" [@chevronDir]="expanded? 'expanded': 'collapsed'"></i>
+      </h4>
+    </div>
+    <div [id]="id" [@visibility]="expanded? 'expanded': 'collapsed'" style="overflow: hidden"   class="panel-collapse">
+      <table *ngIf="files" style="border-radius: 4px; font-size: 85%" class="table table-condensed table-striped table-responsive">
+        <tr *ngFor="let file of files">
+          <td style="width: 60%;"><a [href]="file.location" target="_blank">{{file.name}}</a></td>
+          <td style="width: 14%; text-align: right">{{file.size | fileSizeFormat}}</td>
+          <td style="width: 26%; text-align: right">{{file.date.modified | date:'yyyy-MM-dd HH:mm'}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+

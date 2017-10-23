@@ -1,0 +1,36 @@
+{
+  "error": null,
+  "questions": [
+    {
+      "question": "H\u00e1ny byte-on T\u00c1ROL a C++ egy karaktert (char)?",
+      "hint": "\"Exactly one byte in size.\"",
+      "link": "http:\/\/www.cplusplus.com\/doc\/tutorial\/variables\/",
+      "_code": "",
+      "solution": 0,
+      "answers": [
+        "implement\u00e1ci\u00f3-f\u00fcgg\u0151",
+        "4",
+        "1",
+        "8"
+      ]
+    },
+    {
+      "question": "Mennyi lesz sizeof(char) \u00e9rt\u00e9ke?",
+      "hint": "\"L\u00e1sd: C++ szabv\u00e1ny 5.3.3; 1. bekezd\u00e9s.\"",
+      "link": "",
+      "_code": "",
+      "solution": 2,
+      "answers": [
+        "implement\u00e1ci\u00f3-f\u00fcgg\u0151",
+        "4",
+        "1",
+        "8"
+      ]
+    }
+  ],
+  "averageData": {
+    "scorePassed": 51.4181,
+    "scoreFailed": 15.5028,
+    "scoreNeutral": 7
+  }
+}

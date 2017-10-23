@@ -1,0 +1,5 @@
+<regor-page-header title="Fájlok és segédanyagok" img="files"></regor-page-header>
+<regor-busy-monitor #busyMonitor>
+  <regor-accordion-files *ngFor="let entry of files" id="files_test" [hasFileList]="true" [header]="entry.name" [files]="entry.files" [expanded]="true"></regor-accordion-files>
+</regor-busy-monitor>
+

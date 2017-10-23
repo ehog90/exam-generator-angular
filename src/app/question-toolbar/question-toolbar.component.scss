@@ -1,0 +1,24 @@
+.toolbar {
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  cursor: pointer;
+  img.icon {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+  }
+  i.toolbar-glyph {
+    font-size: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+}
+
+span.i-know {
+  vertical-align: middle;
+  font-weight: bold;
+}

@@ -1,0 +1,17 @@
+.question .question-header {
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+}
+
+.question .question-header > .badge {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  .question .question-header > .badge {
+    font-size: 12px;
+  }
+}

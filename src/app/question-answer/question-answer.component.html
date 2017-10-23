@@ -1,0 +1,9 @@
+<div style="overflow: hidden; padding-bottom: 1px" [@visibility]="visible? 'expanded': 'collapsed'">
+  <div class="qdiv" *ngIf="question.solPic" [ngClass]="{ pretty: examPart.prettyImages, full: examPart.fullWidth}">
+    <div>
+      <img src="./data/a/{{question.id}}_a.png" class="img-responsive"/>
+    </div>
+  </div>
+  <div *ngIf="question.solHtml" [innerHTML]="question.solHtml">
+  </div>
+</div>

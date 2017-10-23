@@ -1,0 +1,19 @@
+div.alert-warning a {
+  color: #c70000;
+  font-weight: bold;
+}
+
+div.modal-content {
+  background-color: #232900;
+}
+div.modal-header {
+  border-bottom: 1px solid #f90;
+}
+button.close {
+  color: #f90;
+  text-shadow: 0 1px 0 #f90;
+  opacity: 0.4;
+}
+button.close:focus, button.close:hover {
+   color: #f90;
+ }

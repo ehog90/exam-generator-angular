@@ -1,0 +1,60 @@
+{
+  "error": null,
+  "subjectMeta": {
+    "id": "3",
+    "groupId": "2",
+    "name": "Analízis 1.",
+    "auditor": "Dr. Simon Péter",
+    "semester": "2012-2013-2",
+    "website": "http://numanal.inf.elte.hu/~simon/",
+    "folder": "Anal1_Simon",
+    "icon": "primas",
+    "paths": [
+      "anal1simon",
+      "anal1primas",
+      "nuan1simon"
+    ],
+    "primaryPath": "anal1simon"
+  },
+  "notifs": [],
+  "copyrights": [
+    {
+      "id": "5",
+      "examId": "3",
+      "subject": "Előadói (hivatalos) kidolgozás",
+      "name": "Dr. Simon Péter",
+      "website": "http://numanal.inf.elte.hu/~simon/"
+    },
+    {
+      "id": "6",
+      "examId": "3",
+      "subject": "Tételkimondások képei",
+      "name": "Morvai Kristóf",
+      "website": "https://people.inf.elte.hu/mokuaai/"
+    }
+  ],
+  "subjectParts": [
+    {
+      "examPartId": "5",
+      "examId": "3",
+      "name": "Tételkimondások",
+      "qNum": "15",
+      "prettyImages": "0",
+      "fullWidth": "0",
+      "ordering": "1",
+      "customWeight": "0",
+      "allQuestions": 179
+    },
+    {
+      "examPartId": "6",
+      "examId": "3",
+      "name": "Bizonyítások",
+      "qNum": "2",
+      "prettyImages": "0",
+      "fullWidth": "0",
+      "ordering": "2",
+      "customWeight": "0",
+      "allQuestions": 57
+    }
+  ]
+}

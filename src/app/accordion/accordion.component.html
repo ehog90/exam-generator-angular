@@ -1,0 +1,14 @@
+<div class="panel-group">
+  <div class="panel panel-default" >
+    <div class="panel-heading" (click)="toggle()"  style="cursor: pointer">
+      <h4 class="panel-title">
+        <a>{{header}}</a>
+        <i class="pull-right glyphicon glyphicon-chevron-up" [@chevronDir]="expanded? 'expanded': 'collapsed' "></i>
+      </h4>
+    </div>
+    <div [id]="id" [@visibility]="expanded? 'expanded': 'collapsed'" [ngStyle]="extraHeaderStyle" style="overflow: hidden" class="panel-collapse">
+      <ng-content>
+      </ng-content>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div [ngClass]="{'off': isOff != undefined}">
+  <h4><span class="badge" style="margin-right: 3px" *ngIf="isOff">off </span>{{title}}</h4>
+  <p class="faq">
+    <ng-content></ng-content>
+  </p>
+</div>

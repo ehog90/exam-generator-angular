@@ -1,0 +1,32 @@
+<div class="row search" style="margin-top: 15px; margin-bottom: 10px;">
+  <div class="col-md-12">
+    <input type="search" class="form-control input-lg" placeholder="Keresés az összes tételben (kezdj el gépelni)" #searchField
+           (input)="searchObservable.next(searchField.value)"/>
+  </div>
+</div>
+<h1>Kérdéssor-generátorok</h1>
+<div class="row">
+  <regor-busy-monitor #busyMonitor>
+    <regor-main-entry *ngFor="let subject of availableSubjects" [link]="'/exam/'+subject.primaryPath+'/random'"
+                      [title]="subject.name" [img]="subject.icon"
+                      [description]="subject.auditor+ ' | ' + subject.semester"></regor-main-entry>
+  </regor-busy-monitor>
+</div>
+<h1>Egyéb</h1>
+<div class="row">
+  <regor-main-entry [link]="'cpp-quiz'" [title]="'C++ beugró kvíz'" [img]="'cpp'"
+                    [description]="'Pataki Norbert'"></regor-main-entry>
+  <regor-main-entry [link]="'free-search'" [title]="'Keresés'" [img]="'magnifier'"
+                    [description]="'Az összes tárgy összes tétele között'"></regor-main-entry>
+  <regor-main-entry [link]="'public-reports'" [title]="'Hibajegyzék'" [img]="'bug-simple'"
+                    [description]="'Hibásnak jelölt tételek'"></regor-main-entry>
+  <regor-main-entry [link]="'shit-storm'" [title]="'IK Flame'" [img]="'flame'"
+                    [description]="'A Nép szava'"></regor-main-entry>
+  <regor-main-entry [externalLink]="'http://dknify.ehog.hu'" [title]="'dknify!'" [img]="'dkn'"
+                    [description]="'A játék.'"></regor-main-entry>
+  <regor-main-entry [link]="'faq'" [title]="'Gyakran Ismételt Kérdések'" [img]="'lizard'"
+                    [description]="'Első látogatáskor kötelező :)'"></regor-main-entry>
+  <regor-main-entry externalLink="http://gabeee.web.elte.hu/misc/Alapok.pdf" [inNewTab]="true"
+                    title="ALAPOK" img="stork"
+                    description="Egyetemi bevezető gólyáknak."></regor-main-entry>
+</div>

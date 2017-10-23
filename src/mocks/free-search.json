@@ -1,0 +1,1013 @@
+{
+  "error": null,
+  "result": [
+    {
+      "question": {
+        "id": 1673,
+        "name": "Mit jelent egy függvény határozatlan integrálja?",
+        "number": 57,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1674,
+        "name": "Mit ért a határozatlan integrál linearitásán?",
+        "number": 58,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1676,
+        "name": "Mit mond ki a primitív függvényekkel kapcsolatos parciális integrálás tétele?",
+        "number": 60,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1686,
+        "name": "Mi a Darboux-féle felső integrál definíciója?",
+        "number": 71,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1687,
+        "name": "Mikor nevez egy függvényt (Riemann)-integrálhatónak?",
+        "number": 72,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1689,
+        "name": "Hogyan szól a Riemann-integrálhatósággal kapcsolatban tanult kritérium az oszcillációs összegekkel megfogalmazva?",
+        "number": 75,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1690,
+        "name": "Felosztássorozatok segítségével adja meg a Riemann-integrálhatóság egy ekvivalens átfogalmazását.",
+        "number": 76,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1693,
+        "name": "Milyen ekvivalens átfogalmazást ismer a Riemann-integrálhatóságra a Riemannféle közelítő összegekkel?",
+        "number": 79,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1694,
+        "name": "Mit jelent a Riemann-integrál linearitása?",
+        "number": 80,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1695,
+        "name": "Hogyan szól a Riemann-integrálható függvények szorzatával kapcsolatban tanult tétel?",
+        "number": 81,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1696,
+        "name": "Hogyan szól a Riemann-integrálható függvények hányadosával kapcsolatban tanult tétel?",
+        "number": 82,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1697,
+        "name": "Mit ért a Riemann-integrál intervallum szerinti additivitásán?",
+        "number": 83,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1698,
+        "name": "Mi a kapcsolat a folytonosság és a Riemann-integrálhatóság között?",
+        "number": 84,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1699,
+        "name": "Mi a kapcsolat a monotonitás és a Riemann-integrálhatóság között?",
+        "number": 85,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1700,
+        "name": "Milyen tételt tanult Riemann-integrálható függvény megváltoztatását illetően?",
+        "number": 86,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1701,
+        "name": "Mit ért azon, hogy a Riemann-integrál az integrandusban monoton?",
+        "number": 87,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1702,
+        "name": "Mit lehet mondani Riemann-integrálható függvény abszolút értékéről integrálhatóság szempontjából?",
+        "number": 88,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1703,
+        "name": "Mi az integrálszámítás első középértéktétele?",
+        "number": 89,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1704,
+        "name": "Mi az integrálszámítás második középértéktétele?",
+        "number": 90,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1708,
+        "name": "Definiálja az integrálfüggvényt.",
+        "number": 94,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1709,
+        "name": "Írja le az integrálfüggvénnyel kapcsolatban tanult tételt.",
+        "number": 95,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1716,
+        "name": "Mi a Darboux-féle alsó integrál definíciója?",
+        "number": 70,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1717,
+        "name": "Adjon meg egy példát nem integrálható függvényre.",
+        "number": 73,
+        "weight": 0,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Tételkimondások, definíciók",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1729,
+        "name": "Az integrálhatóság jellemzése az oszcillációs összegekkel.",
+        "number": 12,
+        "weight": 0,
+        "questionPic": false,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Bizonyítások",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 2
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1730,
+        "name": "Az integrálhatóság jellemzése alkalmas felosztássorozattal.",
+        "number": 13,
+        "weight": 0,
+        "questionPic": false,
+        "solPic": false,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Bizonyítások",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 2
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1731,
+        "name": "Folytonos függvény integrálhatóságára vonatkozó bizonyítás.",
+        "number": 14,
+        "weight": 0,
+        "questionPic": false,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Bizonyítások",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 2
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 1733,
+        "name": "Integrálfüggvény folytonossága, differenciálhatósága.",
+        "number": 16,
+        "weight": 0,
+        "questionPic": false,
+        "solPic": false,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Bizonyítások",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 2
+      },
+      "subject": {
+        "id": 6,
+        "name": "Analízis 2.",
+        "auditor": "Dr. Szili László",
+        "semester": "2013-2014-2",
+        "icon": "anal"
+      }
+    },
+    {
+      "question": {
+        "id": 2405,
+        "name": "Fogalmazza meg a paraméteres integrál tételét.",
+        "number": 62,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2409,
+        "name": "Mi a Darboux-féle alsó integrál definíciója?",
+        "number": 66,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2410,
+        "name": "Mi a Darboux-féle felső integrál definíciója?",
+        "number": 67,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2411,
+        "name": "Mikor nevez egy függvényt (Riemann)-integrálhatónak?",
+        "number": 68,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2412,
+        "name": "Hogyan szól a Riemann-integrálható függvények összegével kapcsolatban tanult tétel?",
+        "number": 69,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2413,
+        "name": "Hogyan szól a Riemann-integrálható függvények szorzatával kapcsolatban tanult tétel?",
+        "number": 70,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2414,
+        "name": "Hogyan szól a Riemann-integrálható függvények hányadosával kapcsolatban tanult tétel?",
+        "number": 71,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2415,
+        "name": "Mi a kapcsolat a folytonosság és a Riemann-integrálhatóság között?",
+        "number": 72,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2416,
+        "name": "Mit ért azon, hogy a Riemann-integrál az integrandusban monoton?",
+        "number": 73,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2417,
+        "name": "Mi az integrálszámítás középértéktétele?",
+        "number": 74,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2418,
+        "name": "Fogalmazza meg a szukcesszív integrálásról szóló tételt.",
+        "number": 75,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": false,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2420,
+        "name": "A normáltartományon való integrálás szabálya.",
+        "number": 77,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2421,
+        "name": "Mondja ki az integráltranszformációról tanult tételt.",
+        "number": 78,
+        "weight": 1,
+        "questionPic": true,
+        "solPic": true,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH-ra",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 11,
+        "name": "Analízis 3.",
+        "auditor": "Dr. Weisz Ferenc",
+        "semester": "2015-2016-1",
+        "icon": "anal3"
+      }
+    },
+    {
+      "question": {
+        "id": 2456,
+        "name": "Fogalmazza meg az integrálható tagú függvénysorozatokra vonatkozó tételt!",
+        "number": 34,
+        "weight": 1,
+        "questionPic": false,
+        "solPic": false,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH anyaga",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 12,
+        "name": "Modellek és algoritmusok (B)",
+        "auditor": "Dr. Chripkó Ágnes",
+        "semester": "2015-2016-2",
+        "icon": "modalg"
+      }
+    },
+    {
+      "question": {
+        "id": 2459,
+        "name": "Mondja ki az integrálható tagú függvénysorokra vonatkozó tételt!",
+        "number": 37,
+        "weight": 1,
+        "questionPic": false,
+        "solPic": false,
+        "solPdf": false
+      },
+      "examPart": {
+        "name": "Második ZH anyaga",
+        "fullWidth": false,
+        "prettyImages": true,
+        "ordering": 1
+      },
+      "subject": {
+        "id": 12,
+        "name": "Modellek és algoritmusok (B)",
+        "auditor": "Dr. Chripkó Ágnes",
+        "semester": "2015-2016-2",
+        "icon": "modalg"
+      }
+    }
+  ]
+}

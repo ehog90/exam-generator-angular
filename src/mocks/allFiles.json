@@ -1,0 +1,211 @@
+{
+  "error": null,
+  "fileData": [
+    {
+      "type": "FOLDER",
+      "name": "Anal3_Weisz",
+      "files": [
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Anal3_Weisz\/anal3_feladatgyujtemeny_int.pdf",
+          "size": 582340,
+          "date": {
+            "modified": 1453644301000,
+            "created": 1453644301000
+          },
+          "name": "anal3-feladatgyujtemeny-int.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Anal3_Weisz\/anal_baloghtamas3.pdf",
+          "size": 308923,
+          "date": {
+            "modified": 1453644302000,
+            "created": 1453644302000
+          },
+          "name": "anal-baloghtamas3.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Anal3_Weisz\/zh_2015_osz.pdf",
+          "size": 803421,
+          "date": {
+            "modified": 1453644302000,
+            "created": 1453644302000
+          },
+          "name": "zh-2015-osz.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Anal3_Weisz\/anal3_2015_kerdesek.pdf",
+          "size": 93696,
+          "date": {
+            "modified": 1453644299000,
+            "created": 1453644299000
+          },
+          "name": "anal3-2015-kerdesek.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Anal3_Weisz\/Analizis3-BC-1Zh-2014-04-04 (4).pdf",
+          "size": 90455,
+          "date": {
+            "modified": 1453644300000,
+            "created": 1453644300000
+          },
+          "name": "Analizis3-BC-1Zh-2014-04-04 (4).pdf"
+        }
+      ]
+    },
+    {
+      "type": "FOLDER",
+      "name": "Anal1_Simon",
+      "files": [
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Anal1_Simon\/kerdesek_2015_osz.pdf",
+          "size": 151739,
+          "date": {
+            "modified": 1453644303000,
+            "created": 1453644303000
+          },
+          "name": "kerdesek-2015-osz.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Anal1_Simon\/Anal\u00edzis-1-vizsgakidolgoz\u00e1s_2015.pdf",
+          "size": 485662,
+          "date": {
+            "modified": 1453644304000,
+            "created": 1453644304000
+          },
+          "name": "Anal\u00edzis-1-vizsgakidolgoz\u00e1s-2015.pdf"
+        }
+      ]
+    },
+    {
+      "type": "FOLDER",
+      "name": "DM1_Burcsi",
+      "files": [
+        {
+          "type": "FILE",
+          "location": ".\/_files\/DM1_Burcsi\/mintavizsgazh_2015.pdf",
+          "size": 91861,
+          "date": {
+            "modified": 1453644303000,
+            "created": 1453644303000
+          },
+          "name": "mintavizsgazh-2015.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/DM1_Burcsi\/vizsgakerdesek_minta_2015.pdf",
+          "size": 110128,
+          "date": {
+            "modified": 1453644303000,
+            "created": 1453644303000
+          },
+          "name": "vizsgakerdesek-minta-2015.pdf"
+        }
+      ]
+    },
+    {
+      "type": "FOLDER",
+      "name": "ORSI",
+      "files": [
+        {
+          "type": "FILE",
+          "location": ".\/_files\/ORSI\/bead1.zip",
+          "size": 1681,
+          "date": {
+            "modified": 1453644309000,
+            "created": 1453644309000
+          },
+          "name": "bead1.zip"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/ORSI\/bead2_dokumentacioval.zip",
+          "size": 284670,
+          "date": {
+            "modified": 1453644309000,
+            "created": 1453644309000
+          },
+          "name": "bead2-dokumentacioval.zip"
+        }
+      ]
+    },
+    {
+      "type": "FOLDER",
+      "name": "Valsz\u00e1m",
+      "files": [
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Valsz\u00e1m\/valszam_meo.pdf",
+          "size": 117930,
+          "date": {
+            "modified": 1453656239000,
+            "created": 1453656239000
+          },
+          "name": "valszam-meo.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Valsz\u00e1m\/ub_mego2.pdf",
+          "size": 897838,
+          "date": {
+            "modified": 1453656242000,
+            "created": 1453656242000
+          },
+          "name": "ub-mego2.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Valsz\u00e1m\/ub_mego1.pdf",
+          "size": 1489470,
+          "date": {
+            "modified": 1453656238000,
+            "created": 1453656238000
+          },
+          "name": "ub-mego1.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Valsz\u00e1m\/Megoldasok2015osz.pdf",
+          "size": 1099040,
+          "date": {
+            "modified": 1453656238000,
+            "created": 1453656238000
+          },
+          "name": "Megoldasok2015osz.pdf"
+        }
+      ]
+    },
+    {
+      "type": "FOLDER",
+      "name": "Modalg",
+      "files": [
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Modalg\/modalg_kerdesek_1zh.pdf",
+          "size": 58560,
+          "date": {
+            "modified": 1456345977000,
+            "created": 1456345977000
+          },
+          "name": "modalg-kerdesek-1zh.pdf"
+        },
+        {
+          "type": "FILE",
+          "location": ".\/_files\/Modalg\/modalg_kerdesek_1zh_0325updated.pdf",
+          "size": 58299,
+          "date": {
+            "modified": 1458903005000,
+            "created": 1458903005000
+          },
+          "name": "modalg-kerdesek-1zh-0325updated.pdf"
+        }
+      ]
+    }
+  ]
+}

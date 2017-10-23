@@ -40,3 +40,14 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Data
+
+/src/data/
+/src/files/
+
+
+/src/php/*.php
+/src/assets/shit-pics/*.jpg
+/src/assets/shit-pics/*.png
+/src/assets/shit-pics/*.gif

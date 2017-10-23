@@ -1,0 +1,31 @@
+<regor-page-header *ngIf="questionDetails && (questionDetails.questionData.solPdf || questionDetails.questionData.solPic)" title="Hibás tétel jelentése" img="bug"></regor-page-header>
+<regor-page-header *ngIf="questionDetails && !(questionDetails.questionData.solPdf || questionDetails.questionData.solPic)" title="Megoldási javaslat" img="suggest"></regor-page-header>
+
+<regor-report-display [questionDetails]="questionDetails"></regor-report-display>
+
+<div class="report-data" style="margin-bottom: 10px; margin-top: 10px;" *ngIf="existingReport">
+  <div class="row">
+    <div class="col-md-2 strong">
+      Jelentő
+    </div>
+    <div class="col-md-10">
+      {{existingReport.reporter}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 strong">
+      Idő
+    </div>
+    <div class="col-md-10">
+      {{existingReport.ts | date:'yyyy-MM-dd HH:mm:ss'}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 strong">
+      Üzenet
+    </div>
+    <div class="col-md-10">
+      {{existingReport.message}}
+    </div>
+  </div>
+</div>

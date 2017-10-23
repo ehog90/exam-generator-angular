@@ -1,0 +1,114 @@
+[
+  {
+    "semester": "2012-2013-2",
+    "auditor": "Dr. Simon Péter",
+    "id": "3",
+    "name": "Analízis 1.",
+    "icon": "primas",
+    "paths": [
+      "anal1simon",
+      "anal1primas",
+      "nuan1simon"
+    ],
+    "primaryPath": "anal1simon"
+  },
+  {
+    "semester": "2013-2014-2",
+    "auditor": "Dr. Szili László",
+    "id": "6",
+    "name": "Analízis 2.",
+    "icon": "anal",
+    "paths": [
+      "anal2szili"
+    ],
+    "primaryPath": "anal2szili"
+  },
+  {
+    "semester": "2015-2016-1",
+    "auditor": "Dr. Weisz Ferenc",
+    "id": "11",
+    "name": "Analízis 3.",
+    "icon": "anal3",
+    "paths": [
+      "anal3w"
+    ],
+    "primaryPath": "anal3w"
+  },
+  {
+    "semester": "2011-2012-1",
+    "auditor": "Dr. Burcsi Péter",
+    "id": "1",
+    "name": "Diszkrét matematika 1.",
+    "icon": "dm1",
+    "paths": [
+      "dmbupe11"
+    ],
+    "primaryPath": "dmbupe11"
+  },
+  {
+    "semester": "2012-2013-2",
+    "auditor": "Dr. Járai Antal",
+    "id": "2",
+    "name": "Diszkrét matematika 2.",
+    "icon": "dm2",
+    "paths": [
+      "dm2jarai13"
+    ],
+    "primaryPath": "dm2jarai13"
+  },
+  {
+    "semester": "2013-2014-2",
+    "auditor": "Dr. Burcsi Péter",
+    "id": "8",
+    "name": "Diszkrét matematika 2.",
+    "icon": "dm2",
+    "paths": [
+      "dm2bupe13"
+    ],
+    "primaryPath": "dm2bupe13"
+  },
+  {
+    "semester": "2015-2016-2",
+    "auditor": "Dr. Chripkó Ágnes",
+    "id": "12",
+    "name": "Modellek és algoritmusok (B)",
+    "icon": "modalg",
+    "paths": [
+      "modalg"
+    ],
+    "primaryPath": "modalg"
+  },
+  {
+    "semester": "2014-2015-1",
+    "auditor": "Dr. Krebsz Anna",
+    "id": "5",
+    "name": "Numerikus módszerek 1.",
+    "icon": "matrix",
+    "paths": [
+      "numera1kre"
+    ],
+    "primaryPath": "numera1kre"
+  },
+  {
+    "semester": "2014-2015-2",
+    "auditor": "Dr. Krebsz Anna",
+    "id": "9",
+    "name": "Numerikus módszerek 2. (B)",
+    "icon": "matrix",
+    "paths": [
+      "nummod215"
+    ],
+    "primaryPath": "nummod215"
+  },
+  {
+    "semester": "-",
+    "auditor": "Dr. Horváth Zoltán",
+    "id": "10",
+    "name": "ORSI",
+    "icon": "orsi",
+    "paths": [
+      "orsi"
+    ],
+    "primaryPath": "orsi"
+  }
+]

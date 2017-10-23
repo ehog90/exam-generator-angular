@@ -1,0 +1,7 @@
+.panel-heading.collapsed {
+  border-radius: 4px;
+}
+
+.panel-heading.expanded {
+  border-radius: 4px 4px 0 0;
+}

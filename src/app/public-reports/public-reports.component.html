@@ -1,0 +1,50 @@
+<regor-page-header title="Hibajegyzék" description="Teszt" img="bug"></regor-page-header>
+
+<regor-busy-monitor #busyMonitor>
+  <div class="row">
+    <table class="table table-condensed table-responsive">
+      <thead>
+        <tr>
+          <th>Tárgy</th>
+          <th>Vizsgarész</th>
+          <th style="width: 25%">Kérdés (szövegesen)</th>
+          <th>Jelentette</th>
+          <th>Ekkor</th>
+          <th>Állapot</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of publicReports">
+          <td>
+          {{report.examName}}
+        </td>
+          <td>
+            {{report.examPartName}}
+          </td>
+          <td style="font-size: 14px">
+            {{report.questionName || 'Kérdés ID: '+report.questionId}}
+          </td>
+          <td>
+            <span class="badge">
+              {{report.reporter || 'Anoním'}}
+            </span>
+          </td>
+          <td>
+            {{report.time | date:'yyyy.MM.dd HH:mm'}}
+          </td>
+          <td>
+            <span class="badge" style="background-color: yellow" *ngIf="report.resolution === 'PENDING'">
+              FÜGGŐBEN
+            </span>
+            <span class="badge" style="background-color: #ff7a43" *ngIf="report.resolution === 'REJECTED'">
+              ELUTASÍTVA
+            </span>
+            <span class="badge" style="background-color: #24c700" *ngIf="report.resolution === 'ACCEPTED'">
+              JAVÍTVA
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</regor-busy-monitor>

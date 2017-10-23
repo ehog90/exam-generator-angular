@@ -1,0 +1,10 @@
+[
+  {
+    "id": "1",
+    "annClass": "warning",
+    "content": "    <b>Nem tetszik a kötelező katalógus?</b> Írd alá a petíciót személyesen (üres ív <a style=\"color: #c70000; font-weight: bold\" href=\"other/peticio.pdf\" target=\"_blank\">itt</a>), vagy Neptunban megtalálod kérdőívként az <i>ügyintézés</i> > <i>kérdőívek</i> alatt. Erősen ajánlott személyesen kitölteni.",
+    "expiry": null,
+    "manualExpiry": true,
+    "expired": false
+  }
+]

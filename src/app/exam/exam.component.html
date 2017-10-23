@@ -1,0 +1,134 @@
+<regor-page-header *ngIf="subjectDetails" [title]="subjectDetails?.subjectMeta?.name" [description]="headerText"
+                   [img]="subjectDetails?.subjectMeta?.icon"></regor-page-header>
+<regor-accordion *ngIf="subjectDetails" header="Tárgyadatok">
+  <div class="panel-body">
+    <div class="subject-data">
+      <div class="row">
+        <div class="col-md-2 strong">
+          Előadó
+        </div>
+        <div class="col-md-10">
+          {{subjectDetails?.subjectMeta?.auditor}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 strong">
+          Szemeszter
+        </div>
+        <div class="col-md-10">
+          {{subjectDetails?.subjectMeta?.semester}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 strong">
+          Felépítés
+        </div>
+        <div class="col-md-10">
+          <span *ngFor="let subjectPart of subjectDetails?.subjectParts">{{subjectPart?.name}} ({{subjectPart?.qNum }} db, {{subjectPart?.allQuestions}} tételből) </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 strong">
+          Weboldal
+        </div>
+        <div class="col-md-10">
+          <span *ngIf="!subjectDetails?.subjectMeta.website">Nincs</span>
+          <a target="_blank" href="{{subjectDetails?.subjectMeta?.website}}"
+             *ngIf="subjectDetails?.subjectMeta?.website">Megnyitás</a>
+        </div>
+      </div>
+      <div class="row" *ngFor="let notif of subjectDetails?.notifs">
+        <div class="col-md-2 strong">
+          Figyelmeztetés
+        </div>
+        <div class="col-md-10">
+          {{notif.content}}
+        </div>
+      </div>
+      <div class="row" *ngIf="subjectDetails?.copyrights?.length > 0">
+        <div class="col-md-2 strong">
+          Külön köszönet
+        </div>
+        <div class="col-md-10">
+          <div *ngFor="let copyright of subjectDetails?.copyrights">
+            <a *ngIf="!copyright.website">{{copyright.name}}
+              ({{copyright.subject}})</a>
+            <a *ngIf="copyright.website" [href]="copyright.website" target="_blank">{{copyright.name}}
+              ({{copyright.subject}})</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</regor-accordion>
+<regor-accordion-files [files]="files"
+                       header="Korábbi ZH-k, segédanyagok ({{files?.length}} db)"></regor-accordion-files>
+<regor-busy-monitor #subjectBusyMonitor>
+  <div class="row search">
+    <div class="col-md-12">
+      <div class="input-group">
+                <span class="input-group-btn">
+           <button class="btn btn-default"><span class="glyphicon glyphicon-search"
+                                                 style="vertical-align: middle"> </span></button>
+      </span>
+        <input #searchStringDom type="search" class="form-control" placeholder="Kereséshez kezdj el gépelni…"
+               [value]="searchString"
+               (input)="searchObservable.next(searchStringDom.value)" (focus)="setUpSearchListener()"/>
+        <span class="input-group-btn">
+           <button (click)="resetSearch(); searchStringDom.value = null" class="btn btn-default"
+                   [disabled]="currentMode !== 'search'"><span class="glyphicon glyphicon-trash"
+                                                               style="vertical-align: middle"> </span></button>
+      </span>
+      </div>
+    </div>
+  </div>
+  <regor-exam-controller (onReGenerate)="searchStringDom.value = null; randomExam()"
+                         (onAutoExpandChanged)="onAutoExpandChanged($event)"
+                         (onAllShow)="searchStringDom.value = null; allQuestions()"></regor-exam-controller>
+  <regor-busy-monitor #examBusyMonitor>
+    <div class="exam" *ngIf="examResult">
+      <div class="exam-part" *ngFor="let examPart of examResult.exam">
+        <h3>{{examPart.name}}</h3>
+
+        <div>
+          <div
+            *ngIf="(examPart.selectedOnes == undefined || examPart.selectedOnes.length == 0) && currentMode == 'search'"
+            class="alert alert-warning">Nincs találat.
+          </div>
+          <div
+            *ngIf="(examPart.selectedOnes == undefined || examPart.selectedOnes.length == 0) && currentMode != 'search'"
+            class="alert alert-warning">
+            {{examPart.name}} vizsgarészhez nincs felvéve tétel.
+          </div>
+        </div>
+        <regor-question *ngFor="let question of examPart.selectedOnes"
+                        (openReport)="openReportModal($event)"
+                        [question]="question" [examPart]="examPart"
+                        [hideExpandButton]="!autoExpand"
+        ></regor-question>
+      </div>
+    </div>
+  </regor-busy-monitor>
+  <regor-exam-controller (onReGenerate)="searchStringDom.value = null; randomExam()"
+                         (onAutoExpandChanged)="onAutoExpandChanged($event)"
+                         (onAllShow)="searchStringDom.value = null; allQuestions()">
+
+  </regor-exam-controller>
+</regor-busy-monitor>
+<div class="modal fade" bsModal #reportModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Hibás tétel jelentése / Megoldási javaslat</h4>
+        <span class="pull-right" (click)="reportModal.hide()">
+          <img src="assets/img/close.svg" alt="close"/>
+        </span>
+      </div>
+      <div class="modal-body">
+        <div class="row" #modalTarget>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

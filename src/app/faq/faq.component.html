@@ -1,0 +1,46 @@
+<regor-page-header [title]="'Gyakran Ismételt Kérdések'" [img]="'lizard'"></regor-page-header>
+<div>
+  <div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+    <div class="col-md-12">
+      <regor-faq-entry [title]="'Hogyan generálja a vizsgakérdéseket?'">
+        Tfh összesen 100 lehetséges kérdés van, és 15 kérdés. Ekkor felosztja a 100 kérdést 100 DIV 15 = 6 db-os blokkokra. A maradék 10-et ezen tartományok között random elosztja.
+        És ezen blokkokban lévő kérdésekből választ egyet.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'Mennyire tekinthetők pontosnak az oldalon található megoldások?'">
+        A megoldások egy része hivatalos forrásból származik, egy része meg hallgatók önkéntes kidolgozásán alapul. Ha a tárgyat más oktatja, előfordulhat, hogy a definíció eltér az oktató által elvárttól.
+        De mind a hivatalos, mind az egyéb forrásokból származó kidolgozásokban előfordulhatnak hibák, amit akár ezen az oldalon is be lehet jelenteni.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'Miért van az, ha mobilon nyitom meg az oldalt, a kérdések / válaszok szövegei olvashatatlanok?'">
+        A jegyzetek, amiből az itt található kérdések ki lettek vágva, standard A/4-es, nyomtatandó jegyzetnek lettek szerkesztve. Ezért kisebb méretben nehezen olvashatóak. Ezért okostelefonról érdemes döntött (landscape) üzemmódban olvasni.<br>
+        Az újabb tárgyaknál magas, 300 dpi-s felbontásban lettek lerenderelve az oldalak, így nagyfelbontású eszközön (pl. iPad) kevésbé pixelesedik.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'Néhány megoldás hiányzik. Miért?'">
+        A "bizonytalannak bizonyult", vagy a hibásnak bejelentett megoldásokat, amire nincs biztosan jó válasz, leveszem.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'Az oldalon található anyagokból készültem fel a Numerikus Módszerek 1. vizsgámra, de csak kettesre volt elég, miért?!'">
+        A fent lévő anyag a ketteshez elég, de a jobb jegyért bizony elő kell szedni a jegyzetet.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'XY tárgyból az itt lévő kérdések köszönő viszonyban sincsenek a valóságban elvártakkal. Miért?'">
+        Az elvárt anyag tanárfüggő, és számos tárgyból (Pl. DIMAT 2), a számonkérés gyakorlatiasabb lett, így előfordulhat, hogy az adott definíciót gyakorlati példákon keresztül kérik számon.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'A C++ beugró tesztnél nem változik az elért eredményem. Miért?'">
+        Ebben az esetben az adott kérdésnél nincs megjelölve a helyes válasz, így az értékelésbe sem számít bele.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'C++: Jó választ adtam, nem (azt) fogadta el, amit kellett, miért?'">
+        A kérdéssor nyilvánosan elérhetó anyagokból épült fel. Ebben nem kizártak a hibás megoldások.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'C++: Helyes volt a válaszom, miért nem változik a folyamatjelzőnél a zöld sáv?'">
+        Ez esetben már volt rosz válaszod, vagy a kérdéshez nincs rögzítve a helyes válasz. Ebben az esetben figyelmeztetés jelenik meg.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'Miért hegedű az Analízis 1. piktogramja?'" [isOff]="true">
+        Prímás. Ásd be magad a kari életbe, és megtudod.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'Mi az a SZEMLÉLET?'" [isOff]="true">
+        Leegyszerűsítve: A képzés filozófiáját, anyagát, hozzáállását nevezzük SZEMLÉLETnek. Bővebben, Lásd eggyel feljebb.
+      </regor-faq-entry>
+      <regor-faq-entry [title]="'C++: Mennyire kell komolyan venni a beugrót?'" [isOff]="true">
+        Sokan a pokolra kívánják a C++ beugrót, de ez a beugró nagyon hasonlít egy állásinterjú előtt előforduló teszthez. Ezért érdemes erre tudatosan, precízen felkészülni, még akkor is, ha nem C++-al fogsz foglalkozni.
+      </regor-faq-entry>
+    </div>
+  </div>
+</div>

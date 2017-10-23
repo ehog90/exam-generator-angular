@@ -8,8 +8,16 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        ".htaccess",
+        "styles",
+        "fonts",
+        "glyphs",
         "assets",
-        "favicon.ico"
+        "mocks",
+        "php",
+        "files",
+        "data",
+        "other"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -17,11 +25,23 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "regor",
       "styles": [
-        "styles.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "styles/my-theme.css",
+        "styles/ie10-viewport-bug-workaround.css",
+        "styles/loading-bar.css",
+        "styles/overrides.css",
+        "fonts/stylesheet.css",
+        "glyphs/css/szemlelet-sans.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.slim.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/web-animations-js/web-animations.min.js",
+        "assets/js/jquery.bootstrap-autohidingnavbar.min.js",
+        "assets/js/nav-fix.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -54,7 +74,8 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+    }
   }
 }

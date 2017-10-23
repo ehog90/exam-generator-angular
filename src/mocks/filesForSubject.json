@@ -1,0 +1,24 @@
+{
+  "error": null,
+  "fileData": [
+    {
+      "location": ".\/_files\/DM1_Burcsi\/mintavizsgazh_2015.pdf",
+      "size": 91861,
+      "name": "mintavizsgazh-2015.pdf",
+      "date": {
+        "modified": 1453644303000,
+        "created": 1453644303000
+      }
+    },
+    {
+      "location": ".\/_files\/DM1_Burcsi\/vizsgakerdesek_minta_2015.pdf",
+      "size": 110128,
+      "name": "vizsgakerdesek-minta-2015.pdf",
+      "date": {
+        "modified": 1453644303000,
+        "created": 1453644303000
+      }
+    }
+  ],
+  "dir": "DM1_Burcsi"
+}
