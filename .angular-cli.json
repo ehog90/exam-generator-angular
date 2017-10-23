@@ -28,7 +28,7 @@
       "prefix": "regor",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "styles/my-theme.css",
+        "styles/ehog-orange-green-theme.css",
         "styles/ie10-viewport-bug-workaround.css",
         "styles/loading-bar.css",
         "styles/overrides.css",

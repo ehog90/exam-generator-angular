@@ -1,0 +1,959 @@
+[
+  {
+    "question": "Hány byte-on TÁROL a C++ egy karaktert (char)?",
+    "hint": "\"The fundamental storage unit in the C ++ memory model is the byte. A byte is at least large enough to contain any member of the basic execution character set and is composed of a contiguous sequence of bits, the number of which is implementation-defined.\"",
+    "link": "http://www.cplusplus.com/doc/tutorial/variables/",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "implementáció-függő",
+      "4",
+      "1",
+      "8"
+    ]
+  },
+  {
+    "question": "Mennyi lesz sizeof(char) értéke?",
+    "hint": "\"Lásd: C++ szabvány 5.3.3; 1. bekezdés.\"",
+    "link": "",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "implementáció-függő",
+      "4",
+      "1",
+      "8"
+    ]
+  },
+  {
+    "question": "Melyik reláció hamis az alábbiak közül?",
+    "hint": "sifeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long)<br>sizeof(float) <= sizeof(double) <= sizeof(long double)<br>sizeof(T) == sizeof(unsigned T) == sizeof(signed T)",
+    "link": "",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "sizeof(float)<=sizeof(double)",
+      "sizeof(short)<=sizeof(int)",
+      "sizeof(unsigned char) == sizeof(char)",
+      "sizeof(double) < sizeof(long double)"
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "Pl: 1.6e-19    // 1.6 x 10^-19 <br> 4e-1    // 4 x 10^-1",
+    "link": "http://www.cplusplus.com/doc/tutorial/constants/",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "A 4e-1 és a 0.4 konstansok értéke megegyezik.",
+      "A 4e-1f és a 4.1 konstansok típusa megegyezik.",
+      "A 4e-1f és a 4.1 konstansok értéke megegyezik.",
+      "A 4e2 és a 4.2L konstansok típusa megegyezik."
+    ]
+  },
+  {
+    "question": "Melyik nem preprocesszor direktíva?",
+    "hint": "Preprocesszor direktívák: #define, #undef, #ifdef, #ifndef, #if, #endif, #else, #elif, #line, #error, #include, #pragma",
+    "link": "http://www.cplusplus.com/doc/tutorial/preprocessor/",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "#else",
+      "#elif",
+      "#undef",
+      "#while"
+    ]
+  },
+  {
+    "question": "Melyik definíció az alábiak közül?",
+    "hint": "",
+    "link": "http://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "class MyClass;",
+      "int a[10];",
+      "extern int i;",
+      "struct MyStruct;"
+    ]
+  },
+  {
+    "question": "Melyik igaz az alábbiak közül?",
+    "hint": "\"The call stack, where function parameters, local variables, and other function-related information are stored.\"",
+    "link": "http://www.learncpp.com/cpp-tutorial/79-the-stack-and-the-heap/",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "Az automatikus változók a stack-en jönnek létre.",
+      "Az automatikus vltozók a statikus tárterületen jönnek létre.",
+      "Az automatikus változók a winchester-en jönnek létre.",
+      "Az automatikus változók a heap-en jönnek létre."
+    ]
+  },
+  {
+    "question": "Mi a csillagozott sorban meghívott művelet neve?",
+    "hint": "The copy constructor is used to: <br>Initialize one object from another of the same type...",
+    "link": "http://www.tutorialspoint.com/cplusplus/cpp_copy_constructor.htm",
+    "_code": "class Foo{ <br>...<br> };<br><br> Foo f;<br> Foo g = f; //(*)<br>",
+    "solution": 3,
+    "answers": [
+      "destruktor",
+      "default konstruktor",
+      "értékadó operátor",
+      "copy konstruktor"
+    ]
+  },
+  {
+    "question": "Az alábbi példában a Foo f(5); konstruktor hívása után mennyi lesz f.b értéke?",
+    "hint": "Inicializáló lista",
+    "link": "http://en.cppreference.com/w/cpp/language/initializer_list",
+    "_code": "class Foo{<br> int a, b;<br> Foo(int c): a(c*2), b(c*3) {};<br> };<br>",
+    "solution": 3,
+    "answers": [
+      "10",
+      "nem definiált",
+      "0",
+      "15"
+    ]
+  },
+  {
+    "question": "Melyik típusnak van push_front() tagfüggvénye?",
+    "hint": "STL",
+    "link": "http://www.cplusplus.com/reference/list/list/",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "std::list",
+      "std::set",
+      "std::vector",
+      "std::stack"
+    ]
+  },
+  {
+    "question": "Adott az alábbi X típus és f függvény. Az f(x) függvény hívásakor az X típus melyik műveletét hajtjuk végre a paraméter átadásához?",
+    "hint": "Érték szerinti paraméter átadás miatt másolat készül x ről.",
+    "link": "",
+    "_code": "class X{<br> // ...<br> };<br><br> void f(X a){<br> // ...<br> }; <br><br>X x;<br>",
+    "solution": 3,
+    "answers": [
+      "Az x típus default konstruktorát.",
+      "Az x típus értékadó operátorát.",
+      "Nem hajtunk végre műveletet, mert x hivatkozás szerint adódik át.",
+      "Az x típus copy konstruktorát."
+    ]
+  },
+  {
+    "question": "Az alábbi kódban a csillagozott helyen mi a this-nek a típusa?",
+    "hint": "\"The type of this pointer is either ClassName * or const ClassName *, depending on whether it is inspected inside a non-const or const method of the class ClassName.\"",
+    "link": "http://stackoverflow.com/questions/6067244/type-of-this-pointer",
+    "_code": "struct Foo{<br> void f(){<br>//(*)<br>}<br>};<br>",
+    "solution": 1,
+    "answers": [
+      "const Foo*",
+      "Foo*",
+      "Foo&",
+      "void*"
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "\"It further adds that since std::string does not have a virtual destructor, one should never derive from it.\" Lehet, de nem ajánlott.",
+    "link": "http://stackoverflow.com/questions/6006860/why-should-one-not-derive-from-c-std-string-class",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "Nem származtathatunk az std::string típusból, mert nincs virtuális destruktora.",
+      "Származtathatunk az std::string típusból.",
+      "Nem származtathatunk az std::string típusból, mert az ne mtípus, hanem typedef",
+      "Nem származtathatunk az std::string típusból, mert nincsenek protected adattagjai."
+    ]
+  },
+  {
+    "question": "Mi nem lehet template paraméter az alábiak közül?",
+    "hint": "Template paraméter lehet:<br> -fordítási idejű paraméter<br>-típus paraméter<br>-integrális konstans<br>-külső szerkesztésű objektum, vagy függvény címe <br>Nem lehet: <br> -float <br> -karakterlánc literál",
+    "link": "http://stackoverflow.com/questions/2183087/why-cant-i-use-float-value-as-a-template-parameter",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "Típus",
+      "Külső szerkesztésű függvény címe",
+      "Egész konstans",
+      "Karakterlánc literál"
+    ]
+  },
+  {
+    "question": "Mennyi az értéke i-nek az alábbi kód végrehajtása után?",
+    "hint": "A char 1 byte-on van tárolva, míg az int implementáció függő.",
+    "link": "",
+    "_code": "char ch = 255; <br> int i = ch;",
+    "solution": 2,
+    "answers": [
+      "-1",
+      "255",
+      "implementáció-függő",
+      "nem fordul le."
+    ]
+  },
+  {
+    "question": "Melyik értékadás szabályos az alábbi kód után?",
+    "hint": "",
+    "link": "http://www.cplusplus.com/doc/tutorial/pointers/",
+    "_code": "int i = 10; <br> const int j = 15; <br> <br> const int *p = &j;<br>",
+    "solution": 3,
+    "answers": [
+      "p = *j;",
+      "*p = i;",
+      "p *= i",
+      "p = &i;"
+    ]
+  },
+  {
+    "question": "Hány byte-on tárol a C++ egy double-t?",
+    "hint": "sizeof(char) == 1, minden más implementáció függő.",
+    "link": "http://www.cplusplus.com/doc/tutorial/variables/",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "implementáció-függő",
+      "4",
+      "8",
+      "6"
+    ]
+  },
+  {
+    "question": "Melyik reláció hamis az alábbiak közül?",
+    "hint": "sifeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long)<br>sizeof(float) <= sizeof(double) <= sizeof(long double)<br>sizeof(T) == sizeof(unsigned T) == sizeof(signed T)",
+    "link": "",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "sizeof(unsigned char) == sizeof(char)",
+      "sizeof(float)<=sizeof(double)",
+      "sizeof(double) < sizeof(long double)",
+      "sizeof(short)<=sizeof(int)"
+    ]
+  },
+  {
+    "question": "Mi a típusa a 'Hello' literálnak?",
+    "hint": "\"A narrow string literal has type “array of n const char”, where n is the size of the string as defined below, and has static storage duration.\"",
+    "link": "http://stackoverflow.com/questions/15508148/what-is-the-type-of-a-string-literal-in-c",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "const std::string",
+      "char*",
+      "char[5]",
+      "const char[6]"
+    ]
+  },
+  {
+    "question": "Melyik nem preprocesszor direktíva?",
+    "hint": "Preprocesszor direktívák: #define, #undef, #ifdef, #ifndef, #if, #endif, #else, #elif, #line, #error, #include, #pragma",
+    "link": "",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "#while",
+      "#elif",
+      "#undef",
+      "#else"
+    ]
+  },
+  {
+    "question": "Melyik konténer asszociatív?",
+    "hint": "-szekvenciális konténerek: vector, deque, list, std::string <br>-asszociatív adatszerkezetek: set, multiset, map, multimap",
+    "link": "",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "std::queue",
+      "std::set",
+      "std::vector",
+      "std::list"
+    ]
+  },
+  {
+    "question": "Mi lesz az a változó értéke a függvényhívás után?",
+    "hint": "Referencia szerint adjuk át a paramétereket.",
+    "link": "",
+    "_code": "int a = 1, b = 2;<br>void f(int& x, int& y){<br>int t = x;<br> x = y;<br> y = t; <br>} <br> <br> f(a, b);",
+    "solution": 1,
+    "answers": [
+      "nem definiált",
+      "2",
+      "semmi, fordítási hiba keletkezik",
+      "1"
+    ]
+  },
+  {
+    "question": "Az alábbiak közül melyiket kötelező inicializálni az inicializáló listában?",
+    "hint": "\"const and reference variables must be initialized on the line they are declared\"",
+    "link": "http://www.learncpp.com/cpp-tutorial/101-constructor-initialization-lists/",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "Az összes adattagot",
+      "Tömböket",
+      "Semmit sem kötelező inicializálni",
+      "A konstansokat"
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "Az első kettő kizárható a link alapján;<br> int* const p; esetén a mutatott érték megváltoztatható, az nem, hogy hova mutat.",
+    "link": "http://stackoverflow.com/questions/399003/is-the-sizeofsome-pointer-always-equal-to-four",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "A sizeof(int) == sizeof(int* const) reláció mindig igaz.",
+      "Egy int* const típusú pointer mérete 8 byte.",
+      "Egy int* const típusú pointer mutathat változóra.",
+      "Egy int* const típusú pointer nem változtathatja meg a mutatott értéket."
+    ]
+  },
+  {
+    "question": "Melyik reláció hamis az alábbiak közül?",
+    "hint": "sifeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long)<br>sizeof(float) <= sizeof(double) <= sizeof(long double)<br>sizeof(T) == sizeof(unsigned T) == sizeof(signed T)",
+    "link": "http://stackoverflow.com/questions/4897844/is-sizeofbool-defined",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "sizeof(float)<=sizeof(long double)",
+      "sizeof(char) == sizeof(signed char)",
+      "sizeof(bool) == sizeof(char)",
+      "sizeof(short)<=sizeof(long int)"
+    ]
+  },
+  {
+    "question": "Mennyi a 012 konstans értéke?",
+    "hint": "Octal",
+    "link": "http://www.cplusplus.com/doc/tutorial/constants/",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "18",
+      "0.12",
+      "12",
+      "10"
+    ]
+  },
+  {
+    "question": "Melyik igaz az alábbiak közül?",
+    "hint": "",
+    "link": "http://stackoverflow.com/questions/93039/where-are-static-variables-stored-in-c-c",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "A globális változók a heap-en jönnek létre.",
+      "A globális változók a statikus tárterületen jönnek létre.",
+      "A globális változók a stack-en jönnek létre.",
+      "A globális változók a winchester-en jönnek létre."
+    ]
+  },
+  {
+    "question": "Melyik deklarációra illeszkedik a csillaggal jelölt sorban meghívott művelet?",
+    "hint": "The copy constructor is used to: <br>Initialize one object from another of the same type...",
+    "link": "http://www.tutorialspoint.com/cplusplus/cpp_copy_constructor.htm",
+    "_code": "class Foo{<br> ... <br>};<br><br> Foo f; <br> Foo g = f; // (*)",
+    "solution": 2,
+    "answers": [
+      "Foo& Foo::operator=(const Foo& rhs);",
+      "Foo::Foo();",
+      "Foo::Foo(const Foo& rhs);",
+      "void Foo::operator()();"
+    ]
+  },
+  {
+    "question": "Mitől válik egy osztály absztraktá?",
+    "hint": "An abstract class is, conceptually, a class that cannot be instantiated and is usually implemented as a class that has one or more pure virtual (abstract) functions.",
+    "link": "https://en.wikibooks.org/wiki/C%2B%2B_Programming/Classes/Abstract_Classes",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "Van virtuális destruktora.",
+      "Van tisztán virtuális tagfüggvénye.",
+      "A tagfüggvényeinek csak a deklarácija ismert.",
+      "Van bázisosztálya."
+    ]
+  },
+  {
+    "question": "Mit nevezünk funktornak?",
+    "hint": "",
+    "link": "http://stackoverflow.com/questions/356950/c-functors-and-their-uses",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "Azokat az objektumokat, amelyeknek van operator() -a.",
+      "Implementáció függő.",
+      "Azokat az alprogramokat, amelyeknek nem void a visszatérési érték típusa.",
+      "Azokat az alprogramokat, amelyeknek void a visszatérési érték típusa."
+    ]
+  },
+  {
+    "question": "Melyik igaz az alábbiak közül?",
+    "hint": "",
+    "link": "http://www.cplusplus.com/doc/tutorial/inheritance/",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "A friend kulcsszó több osztály logikai csoportosítására szolgál.",
+      "Egy friend függvény hozzáférhet az osztály private tagjaihoz.",
+      "A friend kulcsszóval meghatározhatjuk a közelebbi osztályt többszörös öröklődés eseténben.",
+      "Egy friend template osztály esetén példányosításkor nem kötelező explicit megadni a template paramétereket."
+    ]
+  },
+  {
+    "question": "Hány byte-on tárol a C++ egy float-ot?",
+    "hint": "sizeof(char) == 1, minden más implementáció függő.",
+    "link": "http://www.cplusplus.com/doc/tutorial/variables/",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "implementáció-függő",
+      "6",
+      "8",
+      "4"
+    ]
+  },
+  {
+    "question": "Melyik reláció hamis az alábbiak közül?",
+    "hint": "sifeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long)<br>sizeof(float) <= sizeof(double) <= sizeof(long double)<br>sizeof(T) == sizeof(unsigned T) == sizeof(signed T)",
+    "link": "",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "sizeof(short)<=sizeof(int)",
+      "sizeof(double) < sizeof(long double)",
+      "sizeof(float)<=sizeof(double)",
+      "sizeof(unsigned char) == sizeof(char)"
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "",
+    "link": "http://www.cplusplus.com/doc/tutorial/constants/",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "A 4e-1f és a 4.1 konstansok típusa megegyezik.",
+      "A 4e2 és a 4.2L konstansok típusa megegyezik.",
+      "A 4e-1 és a 0.4 konstansok értéke megegyezik.",
+      "A 4e-1f és a 4.1 konstansok értéke megegyezik."
+    ]
+  },
+  {
+    "question": "Az X::f() függvényhívás során mit ír ki a program?",
+    "hint": "::i a globális i <br> A link alapján könnyen megérthető",
+    "link": "http://www.cplusplus.com/doc/tutorial/namespaces/",
+    "_code": "int i = 1; <br> namespace X{<br> int i = 2; <br><br> void f(){<br>int a = i + 1;<br> int i = ::i -1;<br> std::cout &lt;&lt; a &lt;&lt; \",\"  &lt;&lt; i &lt;&lt; std::endl;<br>}}",
+    "solution": 0,
+    "answers": [
+      "3, 0",
+      "semmit, fordítási hiba keletkezik",
+      "3, 2",
+      "2, 1"
+    ]
+  },
+  {
+    "question": "Mi lesz az a változó értéke a függvnyhívás után?",
+    "hint": "Érték szerinti paraméter átadás, ezért az f másolatokon hajtja végre a műveletet",
+    "link": "",
+    "_code": "int a = 1, b = 2;<br>void f(int x, int y){<br> int t = x; <br>x = y; <br>y = t; <br>}<br><br>f(a ,b)",
+    "solution": 1,
+    "answers": [
+      "semmi, fordítási hiba keletkezik",
+      "1",
+      "2",
+      "nemdefiniált"
+    ]
+  },
+  {
+    "question": "Melyik igaz az alábbiak közül?",
+    "hint": "",
+    "link": "http://www.cplusplus.com/doc/tutorial/operators/",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "Az alaptípusok prefix operator++-nak void a viszatérési érték típusa.",
+      "A postfix operator++ mindig hatékonyabb, mint a prefix.",
+      "Deklarációban egy plusz paraméterrel tudjuk megkülönböztetni a postfix operator++-t a prefixtől.",
+      "A postfix operator++ mindig a megnövelt értéket adja vissza."
+    ]
+  },
+  {
+    "question": "Hány byte-on tárol a C++ egy int-et?",
+    "hint": "sizeof(char) == 1, minden más implementáció függő.",
+    "link": "http://www.cplusplus.com/doc/tutorial/variables/",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "1",
+      "4",
+      "implementáció-függő",
+      "8"
+    ]
+  },
+  {
+    "question": "Melyik reláció hamis az alábbiak közül?",
+    "hint": "sifeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long)<br>sizeof(float) <= sizeof(double) <= sizeof(long double)<br>sizeof(T) == sizeof(unsigned T) == sizeof(signed T)",
+    "link": "",
+    "solution": 2,
+    "_code": "",
+    "answers": [
+      "sizeof(short)<=sizeof(int)",
+      "sizeof(float)<=sizeof(double)",
+      "sizeof(double) < sizeof(long double)",
+      "sizeof(unsigned char) == sizeof(char)"
+    ]
+  },
+  {
+    "question": "Melyik nem definíció az alábbiak közül?",
+    "hint": "",
+    "link": "http://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "int i;",
+      "void f(int i);",
+      "class Foo{ //... };",
+      "struct Foo { // ...}"
+    ]
+  },
+  {
+    "question": "Melyik igaz az alábbiak közül?",
+    "hint": "\"The call stack, where function parameters, local variables, and other function-related information are stored.\"",
+    "link": "http://www.learncpp.com/cpp-tutorial/79-the-stack-and-the-heap/",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "Az automatikus változók a statikus tárterületen jönnek létre.",
+      "Az automatikus változók a heap-en jönnek létre.",
+      "Az automatikus változók a stack-en jönnek létre.",
+      "Az automatikus változók a winchester-en jönnek létre."
+    ]
+  },
+  {
+    "question": "Mi a csilagozott sorban meghívott művelet neve?",
+    "hint": "",
+    "link": "",
+    "_code": "class Foo { <br> ... <br> }; <br> Foo f,g; <br> g = f; // (*)<br>",
+    "solution": 0,
+    "answers": [
+      "értékadó operátor",
+      "destruktor",
+      "default konstruktor",
+      "copy konstruktor"
+    ]
+  },
+  {
+    "question": "Mi lesz az a változó értéke a függvényhívás után?",
+    "hint": "Referencia-szerinti paraméter átadás, ezért ténylegesen a-n és b-n végzi el a műveleteket a függvény.",
+    "link": "",
+    "_code": "int a = 1, b = 2; <br> void f(int& x, int& y) { <br> int t = x;<br> x = y;<br> <br> y = t; <br> }<br> f(a,b);",
+    "solution": 3,
+    "answers": [
+      "nem definiált",
+      "semmi, fordítási hiba keletkezik",
+      "1",
+      "2"
+    ]
+  },
+  {
+    "question": "Mi a típusa a 5e2f literálnak?",
+    "hint": "",
+    "link": "http://www.cplusplus.com/doc/tutorial/constants/",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "float",
+      "int",
+      "double",
+      "ez nem szabályos konstans"
+    ]
+  },
+  {
+    "question": "Mi a problémája a preprocesszor használatnak?",
+    "hint": "#define SQUARE(x) x*x <br> esetén <br> std::cout &lt;&lt; SQUARE(2 + 2) azonos: std::cout&lt;&lt;2+2*2+2;",
+    "link": "",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "A Java programozási nyelv nem támogatja, ezért nem tudjuk együtt használni C++-t a Javával.",
+      "A preprocesszor implmentáció-specifikus",
+      "Jelentősen növeli a futási időt",
+      "Független a C++ nyelvtől, ezért nincs tekintettel a nyelvi szabályokra."
+    ]
+  },
+  {
+    "question": "Mennyi lesz a foo.a értéke (C++ '98-as szabvány szerint)?",
+    "hint": "",
+    "link": "",
+    "_code": "struct Foo {<br> int a;<br>Foo(int i):Foo(i, 0) {<br>}<br>Foo(int i, int j):a(i) {<br>}<br>};<br><br>Foo foo(4);<br>",
+    "solution": 0,
+    "answers": [
+      "Fordítási hibát kapunk.",
+      "0",
+      "Nemdefiniált.",
+      "4"
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "",
+    "link": "https://en.wikibooks.org/wiki/C%2B%2B_Programming/Classes/Abstract_Classes",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "Absztrakt osztályból nem lehet objektumot létrehozni.",
+      "Absztrakt osztálynak nem lehet adattagja.",
+      "Absztrakt osztályból nem lehet származtatni.",
+      "Absztrakt osztálynak nem lehet konstruktora."
+    ]
+  },
+  {
+    "question": "Mi nem lehet template paraméter az alábbiak közül?",
+    "hint": "Template paraméter lehet:<br> -fordítási idejű paraméter<br>-típus paraméter<br>-integrális konstans<br>-külső szerkesztésű objektum, vagy függvény címe <br>Nem lehet: <br> -float <br> -karakterlánc literál",
+    "link": "http://stackoverflow.com/questions/643763/what-are-the-requirements-for-c-template-parameters",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "Lebegőpontos konstans",
+      "Külső szerkesztésű objektum címe",
+      "Logikai konstans",
+      "Típus"
+    ]
+  },
+  {
+    "question": "Mi a típusa a 0xff konstansnak?",
+    "hint": "Ez egy hexadecimális szám!",
+    "link": "http://www.cplusplus.com/doc/tutorial/constants/",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "double",
+      "char*",
+      "double*",
+      "int"
+    ]
+  },
+  {
+    "question": "Az std::sort algoritmus melyik konténerrel használható?",
+    "hint": "",
+    "link": "http://www.cplusplus.com/articles/NhA0RXSz/",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "std::queue",
+      "std::list",
+      "std::set",
+      "std::vector"
+    ]
+  },
+  {
+    "question": "Melyik nem definíció az alábbiak közül?",
+    "hint": "",
+    "link": "http://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "const int l = 1;",
+      "static int i;",
+      "extern int j;",
+      "int k;"
+    ]
+  },
+  {
+    "question": "Mikor nevezünk erősen típusosnak egy nyelvet?",
+    "hint": "\" Azon nyelveket, melyekben minden változót előre deklarálnunk kell, és minden adattípussal csak a rajta elvégezhető műveleteket tehetjük meg, erősen tipikus programozási nyelvnek hívjuk.\"",
+    "link": "https://hu.wikipedia.org/wiki/Erősen_t%C3%ADpusos_programozási_nyelv",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "Erősen típusos, ha a forditóprogram ellenőrzi, hogy definiált-e egy objektum vagy alprogram.",
+      "Erősen típusos, ha minden kifejezés és részkifejezés típusa futási időben meghatározott.",
+      "Erősen típusos, ha minden kifejezés és részkifejezés típusa fordítási időben meghatározott.",
+      "Erősen típusos, ha a futási időben nem keletkezik kivétel."
+    ]
+  },
+  {
+    "question": "Az alábbiak közül melyik függvényhívással lehet ekvivalens az alábbi (csillaggal jelölt) operátorhívás?",
+    "hint": "",
+    "link": "",
+    "_code": "class Matrix {<br>// ... <br>};<br>Matrix a,b;<br>a + b; // (*)<br>",
+    "solution": 1,
+    "answers": [
+      "operator+(a,b);",
+      "a.operator+(a,b);",
+      "Matrix.operator+(a,b);",
+      "b.operator+(a);"
+    ]
+  },
+  {
+    "question": "Mi a paraméterdedukció?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "Az az eljárás, amikor referencia-szerinti paraméterátadásra cseréljük az érték-szerintit.",
+      "Az az eljárás, amikor a fordítóprogram levezeti a template paramétereket a függvényhívásból.",
+      "Az az eljárás, amikor linker feloldja a külső függvényhívások paramétereit.",
+      "Az az eljárás, amikor default paraméterekkel látjuk el a függvény paramétereket."
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "solution": 1,
+    "answers": [
+      "Paraméterdedukció csak függvények esetében használható.",
+      "Nem lehet származtatni typedef által meghatározott típusból.",
+      "A paraméterdedukció futási időben történik.",
+      "Az objektum dinamikus típusát ismeri a fordítóprogram."
+    ]
+  },
+  {
+    "question": "Melyik kulcsszó nem a tárolási osztályt specifikálja egy deklarációban ill. definícióban?",
+    "hint": "",
+    "link": "http://www.tutorialspoint.com/ansi_c/c_storage_classes.htm",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "extern",
+      "static",
+      "auto",
+      "int"
+    ]
+  },
+  {
+    "question": "Az alábbi függvény deklarációk alapján melyik tagfüggvény hívható meg const Foo objektumon?",
+    "hint": "",
+    "link": "",
+    "solution": 1,
+    "_code": "struct Foo {<br>virtual void a(const int i);<br> const int& b(const int i);<br> void c() const; <br> const Foo& d(const Foo& f);<br> };<br> Foo foo;<br>",
+    "answers": [
+      "foo.d(foo);",
+      "foo.c()",
+      "foo.a(3)",
+      "foo.b(12);"
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "answers": [
+      "Polimorf osztályok esetében az összes konstruktornak virtuálisnak kell lennie.",
+      "Nem lehet olyan osztályból származtatni, amelynek nincsen virtuális destruktora.",
+      "A bázisosztály konstruktorai nem öröklődnek a származtatott típusba.",
+      "A konstruktor közül csak a copy konstruktor lehet virtuális, hogy felüldefiniálható legyen a másolás."
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "A dynamic_cast fordítás idejű típuskonverziót végez.",
+      "A dynamic_cast használatához nem lehet statikus adattagja az osztálynak.",
+      "A dynamic_cast soha nem dob kivételt.",
+      "A dynamic_cast használatához polimorf osztályokra van szükség."
+    ]
+  },
+  {
+    "question": "Melyik igaz az alábbiak közül?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "A bázisosztály konstruktorai nem öröklődnek a származtatott típusba.",
+      "Nem lehet olyan osztályból származtatni, amelynek nincs virtuális destruktora.",
+      "Polimorf osztályok esetében az összes konstruktornak virtuálisnak kell lennie.",
+      "A konstruktor közül csak a copy konstruktor lehet virtuális, hogy felüldefiniálható legyen a másolás."
+    ]
+  },
+  {
+    "question": "Az alábbi példában a Foo f(10); konstruktor hívása után mennyi lesz f.x értéke?",
+    "hint": "",
+    "link": "http://en.cppreference.com/w/cpp/language/initializer_list",
+    "_code": "struct Foo{<br>int x, y;<br>Foo(int i):y(i), x(y++){}<br>};",
+    "solution": "#",
+    "answers": [
+      "11",
+      "10",
+      "nem definiált",
+      "0"
+    ]
+  },
+  {
+    "question": "Mi történik az alábbi függvényhíváskor?",
+    "hint": "",
+    "link": "",
+    "_code": "template <typename T><br>T max(const T& a, const T& b);<br>max(4.3, 23);<br>",
+    "solution": 3,
+    "answers": [
+      "Mindkét paraméter double-lé konvertálódik.",
+      "Futási idejű hiba keletkezik.",
+      "Mindkét paraméter int-té konvertálódik.",
+      "Fordítási hiba keletkezik."
+    ]
+  },
+  {
+    "question": "Milyen konstruktora(i) van(nak) az alábbi struct-nak",
+    "hint": "If no user-defined copy constructors are provided for a class type (struct, class, or union), the compiler will always declare a copy constructor as a non-explicit inline public member of its class.",
+    "link": "",
+    "_code": "struct X <br> {<br> X(int){...}<br>};",
+    "solution": 3,
+    "answers": [
+      "csak copy konstruktora",
+      "csak egy int paraméteres konstruktora",
+      "csak default konstruktora",
+      "copy konstruktora és egy int paraméteres konstruktora"
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz egy konstans objektum esetében?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "solution": 3,
+    "answers": [
+      "Az objektumnak csak azok a tagfüggvényei hívhatóak meg, amelyek nem módosítják az adattagjait.",
+      "Az objektum csak default konstruktorral hozható létre.",
+      "Az objektumnak csak private adattagja lehet.",
+      "Az objektumnak csak a konstans tagfügvényei hívhatóak meg."
+    ]
+  },
+  {
+    "question": "Melyik vezet fordítási hibához az alábbi osztály template definíciók közül?",
+    "hint": "",
+    "link": "",
+    "solution": 1,
+    "_code": "template &lt;class T&gt;<br>template &lt;struct T&gt;<br>template &lt;typename T&gt;<br>template &lt;int T&gt;<br>",
+    "answers": [
+      "Az első",
+      "A második",
+      "A harmadik",
+      "A negyedik"
+    ]
+  },
+  {
+    "question": "Mi történik az alábbi függvényhíváskor?",
+    "hint": "",
+    "link": "",
+    "_code": "template <typename T><br> T max(const T& a, const T& b); <br> max(4.3, 23);",
+    "solution": 3,
+    "answers": [
+      "Mindkét paraméter int-é konvertálódik",
+      "Fordítási hiba keletkezik",
+      "Mindkét paraméter double-é konvertálódik",
+      "Futási idejű hiba keletkezik"
+    ]
+  },
+  {
+    "question": "Mennyi a 0x11 konstans értéke?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "11",
+      "9",
+      "17",
+      "3"
+    ]
+  },
+  {
+    "question": "Mennyi a 0x1A4 konstans értéke?",
+    "hint": "🌱",
+    "link": "",
+    "_code": "",
+    "solution": 2,
+    "answers": [
+      "265",
+      "452",
+      "420",
+      "445"
+    ]
+  },
+  {
+    "question": "Mennyi lesz foo.a értéke?",
+    "hint": "",
+    "link": "",
+    "_code": "struct Foo{<br> int a; <br> Foo(int i): Foo(i, 0){}<br>Foo(int i, int j): a(i){}<br>};<br> Foo foo(4);",
+    "answers": [
+      "Fordítási hiba",
+      "Nemdefiniált",
+      "4",
+      "0"
+    ]
+  },
+  {
+    "question": "Melyik konténer szekvenciális?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "answers": [
+      "std::set",
+      "std::deque",
+      "std::queue",
+      "std::map"
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "answers": [
+      "Az objektumok dinamikus típusát ismeri fel a fordítóprogram.",
+      "Nem lehet származtatni typedef által meghatározott típusból.",
+      "Paraméterdedukció csak függvények esetén használható.",
+      "A paraméterdedukció futási időben történik."
+    ]
+  },
+  {
+    "question": "Melyik állítás igaz az alábbiak közül?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "answers": [
+      "A tömbök és a pointerek mindig ekvivalensek.",
+      "A tömbaritmetrika több műveletet képes elvégezni, mint a pointeraritmetrika",
+      "A tömböket mindig void* pointer típusú paraméterként adjuk át függvényeknek.",
+      "A tömbök mindig konvertálódnak első elemre mutató pointerré."
+    ]
+  },
+  {
+    "question": "Mit jelent a static kulcsszó az alábbi osztálydefinícióban?",
+    "hint": "Lehet belőle objektumot létrehozni.<br>",
+    "link": "",
+    "_code": "struct S{<br> static int x;<br>};",
+    "solution": 2,
+    "answers": [
+      "S-ből nem lehet objektumot létrehozni",
+      "az x változót csak S tagfügvényei érhetik el",
+      "x osztályszintű adattag",
+      "semmit, struct kulcsszóval nem lehet osztályt definiálni"
+    ]
+  },
+  {
+    "question": "Melyik kódrészlet helyes?",
+    "hint": "",
+    "link": "",
+    "_code": "",
+    "solution": 0,
+    "answers": [
+      "struct Foo{ template<bool f> void bar() const {//...} }; Foo f; f.bar<true>();",
+      "template <int N> enum A {Elem = N};",
+      "template <typename T> typedef std::set<T, std::greater<T> > GreaterSet;",
+      "template <typename T = int> const T& max(const T& a, const T& b);"
+    ]
+  }
+]
