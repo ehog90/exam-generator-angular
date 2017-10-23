@@ -3,8 +3,8 @@ import {IRibbonAnnouncement} from '../contracts';
 import {AnnouncementService} from '../announcement.service';
 import {PersistenceService} from '../persistence.service';
 import {ModalDirective} from 'ngx-bootstrap';
-import {versionNamespace, versionKey, announcementsNamespace} from "../preference-keys-namespaces";
-import {DeviceService} from "../device.service";
+import {versionNamespace, versionKey, announcementsNamespace} from '../preference-keys-namespaces';
+import {DeviceService} from '../device.service';
 
 @Component({
   selector: 'regor-announcement',
@@ -13,7 +13,7 @@ import {DeviceService} from "../device.service";
   encapsulation: ViewEncapsulation.None,
 })
 export class AnnouncementComponent implements AfterViewInit {
-  private static VERSION = 19;
+  private static VERSION = 20;
   announcements: IRibbonAnnouncement[] = [];
   @ViewChild('changelogModal')
   changelogModal: ModalDirective;
