@@ -8,11 +8,11 @@ import {Location} from '@angular/common';
 import {IFreeSearchResultEntry} from '../contracts';
 import {PersistenceService} from '../persistence.service';
 import {ModalDirective} from 'ngx-bootstrap';
-import {ReportComponent} from '../report/report.component';
 import 'rxjs/add/operator/debounceTime';
 import {BusyMonitorComponent} from '../busy-monitor/busy-monitor.component';
 import {BackendService} from '../backend.service';
-import {freeSearchAutoExpandKey, freeSearchNamespace} from "../preference-keys-namespaces";
+import {freeSearchAutoExpandKey, freeSearchNamespace} from '../preference-keys-namespaces';
+import {ReportModalComponent} from '../report-modal/report-modal.component';
 
 @Component({
   selector: 'regor-free-search',
@@ -59,15 +59,13 @@ export class FreeSearchComponent implements AfterContentInit {
   }
 
   public openReportModal(questionId: string): void {
-    const reportComponentFactory = this.resolver.resolveComponentFactory(ReportComponent);
     this.modalTarget.clear();
-    const modalInstance = this.modalTarget.createComponent(reportComponentFactory).instance;
-    modalInstance.questionId = questionId;
-    modalInstance.close.subscribe(_ => {
-      this.reportModal.hide();
+    const reportModalFactory = this.resolver.resolveComponentFactory(ReportModalComponent);
+    const modalInstance = this.modalTarget.createComponent(reportModalFactory).instance;
+    modalInstance.onClosed = () => {
       this.modalTarget.clear();
-    });
-    this.reportModal.show();
+    };
+    modalInstance.questionId = questionId;
   }
 
 

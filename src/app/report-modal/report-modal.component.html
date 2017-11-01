@@ -1,0 +1,130 @@
+<div class="modal fade" bsModal #reportModal="bs-modal"
+     tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Hibajelentés / Megoldási javaslat</h4>
+        <span class="pull-right" (click)="close()">
+          <img src="assets/img/close.svg" alt="close"/>
+        </span>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <ng-template [ngIf]="messageSent">
+            <div class="row">
+              <div class="col-md-12">
+                <img class="img-responsive" style="max-width: 120px; display: block; margin: 10px auto 10px auto;"
+                     src="assets/img/happy.svg">
+              </div>
+              <div style="text-align: center" class="col-md-12">
+                <h2>Üzenet elküldve!</h2>
+                <button class="btn btn-lg btn-default" (click)="close()">Bezárás</button>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template [ngIf]="!messageSent">
+            <regor-report-display [questionDetails]="questionDetails"></regor-report-display>
+            <form [formGroup]="reportForm" style="margin-top: 10px; margin-bottom: 10px;">
+              <div class="row">
+                <div class="col-md-12">
+                  <regor-accordion header="Fontos infók a hibajelentéssel kapcsolatban!"
+                                   [extraHeaderStyle]="{'background-color': '#ffc7c7', 'border-color': '#ff6161', 'color': '#c70000'}">
+                    <div style="padding: 5px;">
+                      <ul>
+                        <li>A megfelelő hangnemben leírt problémára minden esetben válaszolok.</li>
+                        <li>Adj meg élő e-mail címet, hogy a hibajelentésedre válaszolhassak, ha ez sikertelen (mailer
+                          daemon válasz), a <span style="text-decoration: underline;  font-weight: bold">hibajelentésed elutasításra vagy visszavonásra kerül</span>.
+                        </li>
+                        <li>E-mail címedet semmilyen módon nem tárolja a vizsgagenerátor rendszere, csak az én privát
+                          mailboxomban jelenik meg (ha ez számít).
+                        </li>
+                        <li>Ha egyértelmű, hogy az e-mail, vagy a név (nick név) cím nem valódi, a <span
+                          style="text-decoration: underline; font-weight: bold">hibajelentésed elutasításra kerül</span>,
+                          függetlenül annak tartalmától. Valódi az, ami annak is látszik.
+                        </li>
+                        <li>Neved (nicked) helyett annak monogramja jelenik meg a hibajelentések között, így az nem
+                          derül ki, a monogram szerver oldalon készül.
+                        </li>
+                        <li>A hibajelentés szövege, a probléma nem látszik (egyelőre). A későbbiekben lesz lehetőség
+                          annak megtekintésére (a szöveget esetleg moderálni fogom), illetve az Én kommentem
+                          megtekintésére, hogy mi is volt a baj vele.
+                        </li>
+                      </ul>
+                    </div>
+                  </regor-accordion>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group"
+                       [ngClass]="{'has-error': reportForm.controls['email'].invalid && !reportForm.controls['email'].pristine}">
+                    <label for="email">E-mail</label>
+                    <div class="input-group">
+                      <span class="input-group-addon" id="email">@</span>
+                      <input type="email" class="form-control" formControlName="email" aria-describedby="email"
+                             required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">Név / Nick</label>
+                    <input type="text" class="form-control" formControlName="name" id="name" required>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group"
+                       [ngClass]="{'has-error': reportForm.controls['message'].invalid && !reportForm.controls['message'].pristine}">
+                    <label for="description"
+                           *ngIf="questionDetails && (questionDetails.questionData.solPdf || questionDetails.questionData.solPic)">
+                      Probléma (min. 10 karakter)
+                    </label>
+                    <label for="description"
+                           *ngIf="questionDetails && !(questionDetails.questionData.solPdf || questionDetails.questionData.solPic)">
+                      Megoldási javaslat (min. 10 karakter)
+                    </label>
+                    <textarea class="form-control form-group-sm" id="description" formControlName="message" rows="5"
+                              required></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <re-captcha
+                      formControlName="reCaptcha"
+                      required
+                      [siteKey]="'6Lcn6hMTAAAAAD0d0d3cjQ1PjM0xoZzFoaj6GLdU'"
+                    ></re-captcha>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-default" [disabled]="!reportForm.valid|| isSending"
+                          (click)="submit()">
+                    {{isSending? 'Küldés...': 'Elküld'}}
+                  </button>
+                  <div class="form-group" style="margin-top: 10px">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="alert alert-warning" *ngIf="error">
+                    <strong>Hiba</strong>: {{error}}
+                  </div>
+                </div>
+                <div style="text-align: center" class="col-md-12" *ngIf="error">
+                  <button class="btn btn-lg btn-default" (click)="close()">Bezárás</button>
+                </div>
+              </div>
+            </form>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

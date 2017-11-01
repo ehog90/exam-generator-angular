@@ -115,20 +115,5 @@
 
   </regor-exam-controller>
 </regor-busy-monitor>
-<div class="modal fade" bsModal #reportModal="bs-modal" [config]="{backdrop: 'static'}"
-     tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title pull-left">Hibás tétel jelentése / Megoldási javaslat</h4>
-        <span class="pull-right" (click)="reportModal.hide()">
-          <img src="assets/img/close.svg" alt="close"/>
-        </span>
-      </div>
-      <div class="modal-body">
-        <div class="row" #modalTarget>
-        </div>
-      </div>
-    </div>
-  </div>
+<div #modalTarget>
 </div>

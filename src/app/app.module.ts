@@ -23,7 +23,6 @@ import {QuestionAnswerComponent} from './question-answer/question-answer.compone
 import {ContactComponent} from './contact/contact.component';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {RecaptchaModule, RecaptchaLoaderService} from 'ng-recaptcha';
-import {ReportComponent} from './report/report.component';
 import {ExamControllerComponent} from './exam-controller/exam-controller.component';
 import {ReportDisplayComponent} from './report-display/report-display.component';
 import {ReportViewerComponent} from './report-viewer/report-viewer.component';
@@ -46,6 +45,7 @@ import { QuestionComponent } from './question/question.component';
 import {BackendService} from './backend.service';
 import { BusyMonitorComponent } from './busy-monitor/busy-monitor.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
+import { ReportModalComponent } from './report-modal/report-modal.component';
 
 
 @NgModule({
@@ -66,7 +66,6 @@ import { IconButtonComponent } from './icon-button/icon-button.component';
     QuestionAnswerComponent,
     ContactComponent,
     NotFoundComponent,
-    ReportComponent,
     ExamControllerComponent,
     ReportDisplayComponent,
     ReportViewerComponent,
@@ -79,10 +78,12 @@ import { IconButtonComponent } from './icon-button/icon-button.component';
     PublicReportDetailsComponent,
     QuestionComponent,
     BusyMonitorComponent,
-    IconButtonComponent
+    IconButtonComponent,
+    ReportModalComponent
   ],
   entryComponents: [
-    ReportComponent],
+    ReportModalComponent
+  ],
   imports: [
     FormsModule,
     ReactiveFormsModule,

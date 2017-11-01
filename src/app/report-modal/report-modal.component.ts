@@ -1,43 +1,43 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {IQuestionDetails, INewReport} from '../contracts';
+import {AfterViewInit, Component, EventEmitter, Output, ViewChild} from '@angular/core';
+import {ModalDirective} from 'ngx-bootstrap';
+import {INewReport, IQuestionDetails} from '../contracts';
 import {FormBuilder, Validators} from '@angular/forms';
 import {emailValidator} from '../validators';
 import {BackendService} from '../backend.service';
 
 @Component({
-  selector: 'regor-report',
-  templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css']
+  selector: 'regor-report-modal',
+  templateUrl: './report-modal.component.html',
+  styleUrls: ['./report-modal.component.scss']
 })
-export class ReportComponent implements OnInit {
-
-  questionId: string;
-  questionDetails: IQuestionDetails;
-  error: any;
-  isSending = false;
-  messageSent = false;
-
-  @Output()
-  close = new EventEmitter<boolean>();
-
-  reportForm = this.formBuilder.group({
+export class ReportModalComponent implements AfterViewInit {
+  public reportForm = this.formBuilder.group({
     reCaptcha: ['', Validators.required],
     email: ['', Validators.compose([Validators.required, emailValidator])],
     name: ['', Validators.required],
     message: ['', Validators.compose([Validators.required, Validators.minLength(10)])]
   });
+  @ViewChild('reportModal') public reportModal: ModalDirective;
+  public questionId: string;
+  public questionDetails: IQuestionDetails;
+  public error: any;
+  public isSending = false;
+  public messageSent = false;
+  public onReady = () => {};
+  public onClosed = () => {};
 
   constructor(private formBuilder: FormBuilder,
-              private backendService: BackendService) {
-  }
+              private backendService: BackendService) { }
 
-  ngOnInit() {
+  public ngAfterViewInit(): void {
+    this.reportModal.show();
+    this.onReady();
     this.backendService.getQuestionData(this.questionId).subscribe(questionDetails => {
       this.questionDetails = questionDetails;
     });
   }
 
-  submit(): void {
+  public submit(): void {
     this.isSending = true;
     const newReport: INewReport = {
       name: this.reportForm.controls['name'].value,
@@ -54,6 +54,9 @@ export class ReportComponent implements OnInit {
         this.isSending = false;
       });
   }
-
+  public close() {
+    this.reportModal.hide();
+    this.onClosed();
+  }
 
 }

@@ -18,7 +18,9 @@
   </div>
 </div>
 <div class="button-toolbar">
-  <regor-icon-button glyphName="all-expand" (buttonClick)="toggleAutoExpand()">Automatikus kibontás {{!this.autoExpand ? 'ki': null}}</regor-icon-button>
+  <regor-icon-button glyphName="all-expand" (buttonClick)="toggleAutoExpand()">Automatikus kibontás {{!this.autoExpand ?
+    'ki': null}}
+  </regor-icon-button>
 </div>
 <regor-busy-monitor #busyMonitor>
   <div class="jumbotron" style="margin-top: 10px; text-align: center" *ngIf="result?.length == 0">
@@ -60,21 +62,5 @@
     </div>
   </div>
 </div>
-
-<div class="modal fade" bsModal #reportModal="bs-modal" [config]="{backdrop: 'static'}"
-     tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title pull-left">Hibajelentés / Megoldási javaslat</h4>
-        <span class="pull-right" (click)="reportModal.hide()">
-          <img src="assets/img/close.svg" alt="close"/>
-        </span>
-      </div>
-      <div class="modal-body">
-        <div class="row" #modalTarget>
-        </div>
-      </div>
-    </div>
-  </div>
+<div #modalTarget>
 </div>

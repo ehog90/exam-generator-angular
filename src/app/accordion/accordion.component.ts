@@ -5,23 +5,19 @@ import {NgStyle} from '@angular/common';
 @Component({
   selector: 'regor-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.css'],
+  styleUrls: ['./accordion.component.scss'],
   animations: accordionAnimations
 })
 export class AccordionComponent implements OnInit {
-  @Input()
-  header: string;
-  @Input()
-  id: string;
-  @Input()
-  extraHeaderStyle: NgStyle;
-  @Input()
-  expanded = false;
-  toggle() {
+  @Input() public header: string;
+  @Input() public id: string;
+  @Input() public extraHeaderStyle: NgStyle;
+  @Input() public expanded = false;
+  public toggle() {
     this.expanded = !this.expanded;
   }
   constructor() { }
-  ngOnInit() {
+  public ngOnInit() {
   }
 
 }
