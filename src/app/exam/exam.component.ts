@@ -7,13 +7,12 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {ISubjectDetails, IExam, IFileData} from '../contracts';
 import {Subject} from 'rxjs/Subject';
 import {Location} from '@angular/common';
-import {ModalDirective} from 'ngx-bootstrap';
-import {ReportComponent} from '../report/report.component';
 import 'rxjs/add/operator/debounceTime';
 import {BackendService} from '../backend.service';
 import {BusyMonitorComponent} from '../busy-monitor/busy-monitor.component';
-import {autoExpandNamespace} from "../preference-keys-namespaces";
-import {PersistenceService} from "../persistence.service";
+import {autoExpandNamespace} from '../preference-keys-namespaces';
+import {PersistenceService} from '../persistence.service';
+import {ReportModalComponent} from '../report-modal/report-modal.component';
 
 @Component({
   selector: 'regor-exam',
@@ -27,10 +26,6 @@ export class ExamComponent implements AfterContentInit {
   private static MODE_SEARCH = 'search';
 
   @ViewChild('modalTarget', {read: ViewContainerRef}) modalTarget;
-  modalComponentRef: ViewContainerRef;
-
-  @ViewChild('reportModal')
-  reportModal: ModalDirective;
 
   public autoExpand: boolean = this.persistenceService.getBoolean(autoExpandNamespace, autoExpandNamespace);
   public subjectStringId: string;
@@ -62,15 +57,13 @@ export class ExamComponent implements AfterContentInit {
   }
 
   openReportModal(questionId: string): void {
-    const reportComponentFactory = this.resolver.resolveComponentFactory(ReportComponent);
     this.modalTarget.clear();
-    const modalInstance = this.modalTarget.createComponent(reportComponentFactory).instance;
-    modalInstance.questionId = questionId;
-    modalInstance.close.subscribe(() => {
-      this.reportModal.hide();
+    const reportModalFactory = this.resolver.resolveComponentFactory(ReportModalComponent);
+    const modalInstance = this.modalTarget.createComponent(reportModalFactory).instance;
+    modalInstance.onClosed = () => {
       this.modalTarget.clear();
-    });
-    this.reportModal.show();
+    };
+    modalInstance.questionId = questionId;
   }
 
   setUpSearchListener() {
