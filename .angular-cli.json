@@ -36,7 +36,7 @@
         "glyphs/css/szemlelet-sans.css"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.slim.min.js",
+        "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/web-animations-js/web-animations.min.js",
         "assets/js/jquery.bootstrap-autohidingnavbar.min.js",
