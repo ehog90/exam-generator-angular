@@ -46,6 +46,7 @@ import {BackendService} from './backend.service';
 import { BusyMonitorComponent } from './busy-monitor/busy-monitor.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { ReportModalComponent } from './report-modal/report-modal.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { ReportModalComponent } from './report-modal/report-modal.component';
     RecaptchaFormsModule,
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     TooltipModule.forRoot(),
     ProgressbarModule,
     ModalModule,
