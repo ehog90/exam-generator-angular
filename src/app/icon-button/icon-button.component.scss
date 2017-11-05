@@ -1,4 +1,4 @@
-a.btn {
+a.btn.btn-sm {
   padding: 6px 6px;
   margin-right: 0;
   margin-left: 0;
@@ -6,7 +6,7 @@ a.btn {
   span {
     &.glyph {
       vertical-align: middle;
-      font-size: 24px;
+      font-size: 20px;
       line-height: 0.8;
     }
   }

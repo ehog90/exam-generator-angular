@@ -47,7 +47,7 @@ export class FreeSearchComponent implements AfterContentInit {
 
   public set autoExpand(value: boolean) {
     this._autoExpand = value;
-    this.localStorageService.setString(freeSearchNamespace, freeSearchAutoExpandKey, value.toString());
+    this.localStorageService.setBoolean(freeSearchNamespace, freeSearchAutoExpandKey, value);
   }
 
 
@@ -84,8 +84,7 @@ export class FreeSearchComponent implements AfterContentInit {
       this.location.replaceState(`free-search/${searchString}`);
       this.search(searchString);
     });
-    this.autoExpand = this.localStorageService.getBoolean(
-      freeSearchNamespace, freeSearchAutoExpandKey);
+    this.autoExpand = this.localStorageService.getBoolean(freeSearchNamespace, freeSearchAutoExpandKey);
   }
 
   public resetSearch() {
@@ -102,6 +101,7 @@ export class FreeSearchComponent implements AfterContentInit {
         this.searchInitiated = false;
       });
   }
+
   public toggleAutoExpand() {
     this.autoExpand = !this.autoExpand;
   }

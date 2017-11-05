@@ -104,7 +104,7 @@
         <regor-question *ngFor="let question of examPart.selectedOnes"
                         (openReport)="openReportModal($event)"
                         [question]="question" [examPart]="examPart"
-                        [hideExpandButton]="!autoExpand"
+                        [hideExpandButton]="autoExpand"
         ></regor-question>
       </div>
     </div>

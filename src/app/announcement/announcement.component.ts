@@ -5,6 +5,7 @@ import {PersistenceService} from '../persistence.service';
 import {ModalDirective} from 'ngx-bootstrap';
 import {versionNamespace, versionKey, announcementsNamespace} from '../preference-keys-namespaces';
 import {DeviceService} from '../device.service';
+import {versionNumberIncr} from '../version-data';
 
 @Component({
   selector: 'regor-announcement',
@@ -13,11 +14,10 @@ import {DeviceService} from '../device.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class AnnouncementComponent implements AfterViewInit {
-  private static VERSION = 20;
-  announcements: IRibbonAnnouncement[] = [];
-  @ViewChild('changelogModal')
-  changelogModal: ModalDirective;
-  modalText: string;
+  private static VERSION = versionNumberIncr;
+  public announcements: IRibbonAnnouncement[] = [];
+  @ViewChild('changelogModal') public changelogModal: ModalDirective;
+  public modalText: string;
 
   constructor(
     private announcementService: AnnouncementService,

@@ -1,5 +1,5 @@
 <div class="button-toolbar">
   <regor-icon-button glyphName="refresh" (buttonClick)="onReGenerate.emit(true)">Új</regor-icon-button>
   <regor-icon-button glyphName="all-math" (buttonClick)="onAllShow.emit(true)">Összes</regor-icon-button>
-  <regor-icon-button glyphName="all-expand" (buttonClick)="toggleExpandStatus()">Automatikus kibontás {{!this.autoExpand ? 'ki': null}}</regor-icon-button>
+  <regor-icon-button glyphName="all-expand" (buttonClick)="toggleExpandStatus()">Automatikus kibontás {{this.autoExpand ? 'ki': null}}</regor-icon-button>
 </div>

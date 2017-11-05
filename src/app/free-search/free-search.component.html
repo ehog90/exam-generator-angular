@@ -18,7 +18,7 @@
   </div>
 </div>
 <div class="button-toolbar">
-  <regor-icon-button glyphName="all-expand" (buttonClick)="toggleAutoExpand()">Automatikus kibontás {{!this.autoExpand ?
+  <regor-icon-button glyphName="all-expand" (buttonClick)="toggleAutoExpand()">Automatikus kibontás {{this.autoExpand ?
     'ki': null}}
   </regor-icon-button>
 </div>
@@ -46,7 +46,7 @@
         [examPart]="r.examPart"
         [showExamData]="true"
         [hideTestField]="true"
-        [hideExpandButton]="!autoExpand"
+        [hideExpandButton]="autoExpand"
         [subject]="r.subject"></regor-question>
     </div>
   </div>
