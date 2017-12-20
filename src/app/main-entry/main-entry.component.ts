@@ -8,18 +8,14 @@ import {Router} from '@angular/router';
 })
 export class MainEntryComponent implements OnInit {
 
-  @Input()
-  title: string;
-  @Input()
-  description: string;
-  @Input()
-  img: string;
-  @Input()
-  link: string;
-  @Input()
-  externalLink: string;
-  @Input()
-  inNewTab: boolean;
+  @Input() title: string;
+  @Input() description: string;
+  @Input() img: string;
+  @Input() link: string;
+  @Input() externalLink: string;
+  @Input() inNewTab: boolean;
+  @Input() disabled: boolean;
+
 
   gotoLink(): void {
     if (this.externalLink) {

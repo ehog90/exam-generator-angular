@@ -5,7 +5,6 @@ import {PersistenceService} from '../persistence.service';
 import {ModalDirective} from 'ngx-bootstrap';
 import {versionNamespace, versionKey, announcementsNamespace} from '../preference-keys-namespaces';
 import {DeviceService} from '../device.service';
-import {versionNumberIncr} from '../version-data';
 
 @Component({
   selector: 'regor-announcement',
@@ -14,7 +13,7 @@ import {versionNumberIncr} from '../version-data';
   encapsulation: ViewEncapsulation.None,
 })
 export class AnnouncementComponent implements AfterViewInit {
-  private static VERSION = versionNumberIncr;
+  private static VERSION = 23;
   public announcements: IRibbonAnnouncement[] = [];
   @ViewChild('changelogModal') public changelogModal: ModalDirective;
   public modalText: string;
@@ -33,11 +32,11 @@ export class AnnouncementComponent implements AfterViewInit {
  async ngAfterViewInit() {
     const versionStored: number = Number(this.localStorageService.getString(versionKey, versionNamespace));
     if (versionStored === 0 || versionStored < AnnouncementComponent.VERSION) {
-      this.modalText = await this.announcementService.getChangelog();
+      this.modalText = await this.announcementService.getChangelog().toPromise();
       this.changelogModal.show();
       this.localStorageService.setString(versionNamespace, versionKey, `${AnnouncementComponent.VERSION}`);
     }
-    this.announcements = await this.announcementService.getAnnouncements();
+    this.announcements = await this.announcementService.getAnnouncements().toPromise();
     this.announcements.forEach(announcement => {
       if (this.localStorageService.getBoolean(announcementsNamespace, `${announcement.id}_dismissed`)) {
         announcement.dismissed = true;

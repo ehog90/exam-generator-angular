@@ -51,11 +51,11 @@ export class UrlService {
   };
 
   public static get urls(): IUrls {
-    return environment.production ? UrlService.prodUrls: UrlService.devUrls;
+    return environment.production ? UrlService.prodUrls : UrlService.devUrls;
   }
 
   private static get baseUrl(): string {
-    return environment.production ? UrlService.prodBaseUrl: UrlService.devBaseUrl;
+    return environment.production ? UrlService.prodBaseUrl : UrlService.devBaseUrl;
   }
 
 }

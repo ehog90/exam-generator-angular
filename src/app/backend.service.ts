@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {UrlService} from './url.service';
-import {Http} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import {shuffle} from 'lodash';
 import {ConnectableObservable} from 'rxjs/Rx';
@@ -17,7 +16,7 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 export class BackendService {
   private _subjectListConnectable: ConnectableObservable<ISubjectMetaSmall[]>;
 
-  constructor(private urlService: UrlService, private http: Http, private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
   /* Files */

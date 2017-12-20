@@ -1,6 +1,16 @@
 .col-sm-4.main-entry {
   padding-left: 3px;
   padding-right: 3px;
+  &.disabled {
+    & div.media.jumbotron.mainsubjects {
+      cursor: no-drop;
+      background-color: rgb(56, 56, 56);
+      & h4, & div {
+        color: #dddddd;
+        text-decoration: line-through;
+      }
+    }
+  }
 }
 
 @media (max-width: 1200px) {

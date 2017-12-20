@@ -1,18 +1,5 @@
 [
   {
-    "question": "Hány byte-on TÁROL a C++ egy karaktert (char)?",
-    "hint": "\"The fundamental storage unit in the C ++ memory model is the byte. A byte is at least large enough to contain any member of the basic execution character set and is composed of a contiguous sequence of bits, the number of which is implementation-defined.\"",
-    "link": "http://www.cplusplus.com/doc/tutorial/variables/",
-    "_code": "",
-    "solution": 0,
-    "answers": [
-      "implementáció-függő",
-      "4",
-      "1",
-      "8"
-    ]
-  },
-  {
     "question": "Mennyi lesz sizeof(char) értéke?",
     "hint": "\"Lásd: C++ szabvány 5.3.3; 1. bekezdés.\"",
     "link": "",
@@ -136,10 +123,10 @@
     "_code": "class X{<br> // ...<br> };<br><br> void f(X a){<br> // ...<br> }; <br><br>X x;<br>",
     "solution": 3,
     "answers": [
-      "Az x típus default konstruktorát.",
-      "Az x típus értékadó operátorát.",
+      "Az X típus default konstruktorát.",
+      "Az X típus értékadó operátorát.",
       "Nem hajtunk végre műveletet, mert x hivatkozás szerint adódik át.",
-      "Az x típus copy konstruktorát."
+      "Az X típus copy konstruktorát."
     ]
   },
   {
@@ -149,10 +136,10 @@
     "_code": "struct Foo{<br> void f(){<br>//(*)<br>}<br>};<br>",
     "solution": 1,
     "answers": [
-      "const Foo*",
+      "const Foo* const",
       "Foo*",
       "Foo&",
-      "void*"
+      "const Foo*"
     ]
   },
   {
@@ -164,7 +151,7 @@
     "answers": [
       "Nem származtathatunk az std::string típusból, mert nincs virtuális destruktora.",
       "Származtathatunk az std::string típusból.",
-      "Nem származtathatunk az std::string típusból, mert az ne mtípus, hanem typedef",
+      "Nem származtathatunk az std::string típusból, mert az nem típus, hanem typedef",
       "Nem származtathatunk az std::string típusból, mert nincsenek protected adattagjai."
     ]
   },
@@ -183,7 +170,7 @@
   },
   {
     "question": "Mennyi az értéke i-nek az alábbi kód végrehajtása után?",
-    "hint": "A char 1 byte-on van tárolva, míg az int implementáció függő.",
+    "hint": "A char lehet előjeles és előjel nélküli is, míg az int mindig előjeles egész típus.",
     "link": "",
     "_code": "char ch = 255; <br> int i = ch;",
     "solution": 2,
@@ -234,7 +221,7 @@
     ]
   },
   {
-    "question": "Mi a típusa a 'Hello' literálnak?",
+    "question": "Mi a típusa a \"Hello\" literálnak?",
     "hint": "\"A narrow string literal has type “array of n const char”, where n is the size of the string as defined below, and has static storage duration.\"",
     "link": "http://stackoverflow.com/questions/15508148/what-is-the-type-of-a-string-literal-in-c",
     "_code": "",
@@ -308,7 +295,7 @@
       "A sizeof(int) == sizeof(int* const) reláció mindig igaz.",
       "Egy int* const típusú pointer mérete 8 byte.",
       "Egy int* const típusú pointer mutathat változóra.",
-      "Egy int* const típusú pointer nem változtathatja meg a mutatott értéket."
+      "Egy int* const típusú pointeren keresztül nem változtathatjuk meg az általa mutatott értéket."
     ]
   },
   {
@@ -364,7 +351,7 @@
     ]
   },
   {
-    "question": "Mitől válik egy osztály absztraktá?",
+    "question": "Mitől válik egy osztály absztrakttá?",
     "hint": "An abstract class is, conceptually, a class that cannot be instantiated and is usually implemented as a class that has one or more pure virtual (abstract) functions.",
     "link": "https://en.wikibooks.org/wiki/C%2B%2B_Programming/Classes/Abstract_Classes",
     "_code": "",
@@ -373,7 +360,7 @@
       "Van virtuális destruktora.",
       "Van tisztán virtuális tagfüggvénye.",
       "A tagfüggvényeinek csak a deklarácija ismert.",
-      "Van bázisosztálya."
+      "Van ősosztálya."
     ]
   },
   {
@@ -398,12 +385,12 @@
     "answers": [
       "A friend kulcsszó több osztály logikai csoportosítására szolgál.",
       "Egy friend függvény hozzáférhet az osztály private tagjaihoz.",
-      "A friend kulcsszóval meghatározhatjuk a közelebbi osztályt többszörös öröklődés eseténben.",
+      "A friend kulcsszóval meghatározhatjuk a közelebbi osztályt többszörös öröklődés esetében.",
       "Egy friend template osztály esetén példányosításkor nem kötelező explicit megadni a template paramétereket."
     ]
   },
   {
-    "question": "Hány byte-on tárol a C++ egy float-ot?",
+    "question": "Hány byte-on tárolódik C++-ban egy float?",
     "hint": "sizeof(char) == 1, minden más implementáció függő.",
     "link": "http://www.cplusplus.com/doc/tutorial/variables/",
     "_code": "",
@@ -464,7 +451,7 @@
       "semmi, fordítási hiba keletkezik",
       "1",
       "2",
-      "nemdefiniált"
+      "nem definiált"
     ]
   },
   {
@@ -481,7 +468,7 @@
     ]
   },
   {
-    "question": "Hány byte-on tárol a C++ egy int-et?",
+    "question": "Hány byte-os C++-ba egy int?",
     "hint": "sizeof(char) == 1, minden más implementáció függő.",
     "link": "http://www.cplusplus.com/doc/tutorial/variables/",
     "_code": "",
@@ -515,8 +502,8 @@
     "answers": [
       "int i;",
       "void f(int i);",
-      "class Foo{ //... };",
-      "struct Foo { // ...}"
+      "class Foo { //... };",
+      "struct Foo { // ... };"
     ]
   },
   {
@@ -536,7 +523,7 @@
     "question": "Mi a csilagozott sorban meghívott művelet neve?",
     "hint": "",
     "link": "",
-    "_code": "class Foo { <br> ... <br> }; <br> Foo f,g; <br> g = f; // (*)<br>",
+    "_code": "class Foo { <br> ... <br> }; <br> Foo f, g; <br> g = f; // (*)<br>",
     "solution": 0,
     "answers": [
       "értékadó operátor",
@@ -663,24 +650,11 @@
     ]
   },
   {
-    "question": "Mikor nevezünk erősen típusosnak egy nyelvet?",
-    "hint": "\" Azon nyelveket, melyekben minden változót előre deklarálnunk kell, és minden adattípussal csak a rajta elvégezhető műveleteket tehetjük meg, erősen tipikus programozási nyelvnek hívjuk.\"",
-    "link": "https://hu.wikipedia.org/wiki/Erősen_t%C3%ADpusos_programozási_nyelv",
-    "_code": "",
-    "solution": 2,
-    "answers": [
-      "Erősen típusos, ha a forditóprogram ellenőrzi, hogy definiált-e egy objektum vagy alprogram.",
-      "Erősen típusos, ha minden kifejezés és részkifejezés típusa futási időben meghatározott.",
-      "Erősen típusos, ha minden kifejezés és részkifejezés típusa fordítási időben meghatározott.",
-      "Erősen típusos, ha a futási időben nem keletkezik kivétel."
-    ]
-  },
-  {
     "question": "Az alábbiak közül melyik függvényhívással lehet ekvivalens az alábbi (csillaggal jelölt) operátorhívás?",
     "hint": "",
     "link": "",
     "_code": "class Matrix {<br>// ... <br>};<br>Matrix a,b;<br>a + b; // (*)<br>",
-    "solution": 1,
+    "solution": 0,
     "answers": [
       "operator+(a,b);",
       "a.operator+(a,b);",
@@ -706,7 +680,7 @@
     "hint": "",
     "link": "",
     "_code": "",
-    "solution": 1,
+    "solution": 0,
     "answers": [
       "Paraméterdedukció csak függvények esetében használható.",
       "Nem lehet származtatni typedef által meghatározott típusból.",
@@ -732,7 +706,7 @@
     "hint": "",
     "link": "",
     "solution": 1,
-    "_code": "struct Foo {<br>virtual void a(const int i);<br> const int& b(const int i);<br> void c() const; <br> const Foo& d(const Foo& f);<br> };<br> Foo foo;<br>",
+    "_code": "struct Foo {<br>virtual void a(const int i);<br> const int& b(const int i);<br> void c() const; <br> const Foo& d(const Foo& f);<br> };<br> const Foo foo;<br>",
     "answers": [
       "foo.d(foo);",
       "foo.c()",
@@ -745,10 +719,11 @@
     "hint": "",
     "link": "",
     "_code": "",
+    "solution": 2,
     "answers": [
       "Polimorf osztályok esetében az összes konstruktornak virtuálisnak kell lennie.",
       "Nem lehet olyan osztályból származtatni, amelynek nincsen virtuális destruktora.",
-      "A bázisosztály konstruktorai nem öröklődnek a származtatott típusba.",
+      "A ősosztály konstruktorai nem öröklődnek a származtatott típusba.",
       "A konstruktor közül csak a copy konstruktor lehet virtuális, hogy felüldefiniálható legyen a másolás."
     ]
   },
@@ -759,10 +734,10 @@
     "_code": "",
     "solution": 3,
     "answers": [
-      "A dynamic_cast fordítás idejű típuskonverziót végez.",
+      "A dynamic_cast fordítási idejű típuskonverziót végez.",
       "A dynamic_cast használatához nem lehet statikus adattagja az osztálynak.",
       "A dynamic_cast soha nem dob kivételt.",
-      "A dynamic_cast használatához polimorf osztályokra van szükség."
+      "A dynamic_cast használatához polimorf objektumra van szükség."
     ]
   },
   {
@@ -783,7 +758,7 @@
     "hint": "",
     "link": "http://en.cppreference.com/w/cpp/language/initializer_list",
     "_code": "struct Foo{<br>int x, y;<br>Foo(int i):y(i), x(y++){}<br>};",
-    "solution": "#",
+    "solution": 2,
     "answers": [
       "11",
       "10",
@@ -795,7 +770,7 @@
     "question": "Mi történik az alábbi függvényhíváskor?",
     "hint": "",
     "link": "",
-    "_code": "template <typename T><br>T max(const T& a, const T& b);<br>max(4.3, 23);<br>",
+    "_code": "template &lt;typename T&gt;<br>T max(const T& a, const T& b);<br>max(4.3, 23);<br>",
     "solution": 3,
     "answers": [
       "Mindkét paraméter double-lé konvertálódik.",
@@ -831,11 +806,11 @@
     ]
   },
   {
-    "question": "Melyik vezet fordítási hibához az alábbi osztály template definíciók közül?",
+    "question": "Melyik vezet fordítási hibához az alábbi osztály template deklarációk közül?",
     "hint": "",
     "link": "",
     "solution": 1,
-    "_code": "template &lt;class T&gt;<br>template &lt;struct T&gt;<br>template &lt;typename T&gt;<br>template &lt;int T&gt;<br>",
+    "_code": "template &lt;class T&gt; class X;<br>template &lt;struct T&gt; class X;<br>template &lt;typename T&gt; class X;<br>template &lt;int T&gt; class X;<br>",
     "answers": [
       "Az első",
       "A második",
@@ -847,8 +822,8 @@
     "question": "Mi történik az alábbi függvényhíváskor?",
     "hint": "",
     "link": "",
-    "_code": "template <typename T><br> T max(const T& a, const T& b); <br> max(4.3, 23);",
-    "solution": 3,
+    "_code": "template &lt;typename T&gt;<br> T max(const T& a, const T& b); <br> max(4.3, 23);",
+    "solution": 1,
     "answers": [
       "Mindkét paraméter int-é konvertálódik",
       "Fordítási hiba keletkezik",
@@ -871,7 +846,7 @@
   },
   {
     "question": "Mennyi a 0x1A4 konstans értéke?",
-    "hint": "🌱",
+    "hint": "",
     "link": "",
     "_code": "",
     "solution": 2,
@@ -883,9 +858,10 @@
     ]
   },
   {
-    "question": "Mennyi lesz foo.a értéke?",
+    "question": "Mennyi lesz foo.a értéke C++11 vagy annál újabb szabványok esetén?",
     "hint": "",
     "link": "",
+    "solution": 2,
     "_code": "struct Foo{<br> int a; <br> Foo(int i): Foo(i, 0){}<br>Foo(int i, int j): a(i){}<br>};<br> Foo foo(4);",
     "answers": [
       "Fordítási hiba",
@@ -899,10 +875,11 @@
     "hint": "",
     "link": "",
     "_code": "",
+    "solution": 1,
     "answers": [
       "std::set",
       "std::deque",
-      "std::queue",
+      "std::unordered_set",
       "std::map"
     ]
   },
@@ -911,6 +888,7 @@
     "hint": "",
     "link": "",
     "_code": "",
+    "solution": 2,
     "answers": [
       "Az objektumok dinamikus típusát ismeri fel a fordítóprogram.",
       "Nem lehet származtatni typedef által meghatározott típusból.",
@@ -923,10 +901,11 @@
     "hint": "",
     "link": "",
     "_code": "",
+    "solution": 2,
     "answers": [
       "A tömbök és a pointerek mindig ekvivalensek.",
       "A tömbaritmetrika több műveletet képes elvégezni, mint a pointeraritmetrika",
-      "A tömböket mindig void* pointer típusú paraméterként adjuk át függvényeknek.",
+      "A tömböket érték szerint nem adhatjuk át függvényeknek.",
       "A tömbök mindig konvertálódnak első elemre mutató pointerré."
     ]
   },
@@ -950,10 +929,10 @@
     "_code": "",
     "solution": 0,
     "answers": [
-      "struct Foo{ template<bool f> void bar() const {//...} }; Foo f; f.bar<true>();",
-      "template <int N> enum A {Elem = N};",
-      "template <typename T> typedef std::set<T, std::greater<T> > GreaterSet;",
-      "template <typename T = int> const T& max(const T& a, const T& b);"
+      "struct Foo{ template&lt;bool f&gt; void bar() const {//...} }; Foo f; f.bar&lt;true&gt;();",
+      "template &lt;int N&gt; enum A {Elem = N};",
+      "template &lt;typename T&gt; typedef std::set&lt;T, std::greater&lt;T&gt; &gt; GreaterSet;",
+      "template &lt;typename T = int&gt; const T& max(const T& a, const T& b);"
     ]
   }
 ]

@@ -2,7 +2,6 @@ import './observable-extensions';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
 import {RootComponent} from './root/root.component';
 import {MainComponent} from './main/main.component';
@@ -46,7 +45,7 @@ import {BackendService} from './backend.service';
 import { BusyMonitorComponent } from './busy-monitor/busy-monitor.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { ReportModalComponent } from './report-modal/report-modal.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -92,7 +91,6 @@ import {HttpClientModule} from "@angular/common/http";
     RecaptchaModule.forRoot(),
     RecaptchaFormsModule,
     BrowserModule,
-    HttpModule,
     HttpClientModule,
     TooltipModule.forRoot(),
     ProgressbarModule,

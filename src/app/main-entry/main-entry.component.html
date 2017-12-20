@@ -1,4 +1,4 @@
-<div class="col-sm-4 main-entry" (click)="gotoLink()">
+<div class="col-sm-4 main-entry" [ngClass]="{disabled: disabled}" (click)="gotoLink()">
   <div class="media jumbotron mainsubjects">
     <div class="media-left">
       <i class="main-entry-glyph szemlelet-{{img}}" aria-hidden="true"></i>
