@@ -313,7 +313,7 @@
   },
   {
     "question": "Mennyi a 012 konstans értéke?",
-    "hint": "Octal",
+    "hint": "0 jelöli a 8-as (oktális) számrendszert. Kettő helyiérték: 1, 8. <br/>1 * 8 + 2 * 1 = ?",
     "link": "http://www.cplusplus.com/doc/tutorial/constants/",
     "_code": "",
     "solution": 3,
@@ -432,7 +432,7 @@
     "question": "Az X::f() függvényhívás során mit ír ki a program?",
     "hint": "::i a globális i <br> A link alapján könnyen megérthető",
     "link": "http://www.cplusplus.com/doc/tutorial/namespaces/",
-    "_code": "int i = 1; <br> namespace X{<br> int i = 2; <br><br> void f(){<br>int a = i + 1;<br> int i = ::i -1;<br> std::cout &lt;&lt; a &lt;&lt; \",\"  &lt;&lt; i &lt;&lt; std::endl;<br>}}",
+    "_code": "int i = 1; <br> namespace X{<br> int i = 2; <br><br> void f(){<br>int a = i + 1;<br> int i = ::i -1;<br> std::cout << a << \",\"  << i << std::endl;<br>}}",
     "solution": 0,
     "answers": [
       "3, 0",
@@ -560,7 +560,7 @@
   },
   {
     "question": "Mi a problémája a preprocesszor használatnak?",
-    "hint": "#define SQUARE(x) x*x <br> esetén <br> std::cout &lt;&lt; SQUARE(2 + 2) azonos: std::cout&lt;&lt;2+2*2+2;",
+    "hint": "#define SQUARE(x) x*x <br> esetén <br> std::cout << SQUARE(2 + 2) azonos: std::cout<<2+2*2+2;",
     "link": "",
     "_code": "",
     "solution": 3,
@@ -770,7 +770,7 @@
     "question": "Mi történik az alábbi függvényhíváskor?",
     "hint": "",
     "link": "",
-    "_code": "template &lt;typename T&gt;<br>T max(const T& a, const T& b);<br>max(4.3, 23);<br>",
+    "_code": "template <typename T><br>T max(const T& a, const T& b);<br>max(4.3, 23);<br>",
     "solution": 3,
     "answers": [
       "Mindkét paraméter double-lé konvertálódik.",
@@ -810,7 +810,7 @@
     "hint": "",
     "link": "",
     "solution": 1,
-    "_code": "template &lt;class T&gt; class X;<br>template &lt;struct T&gt; class X;<br>template &lt;typename T&gt; class X;<br>template &lt;int T&gt; class X;<br>",
+    "_code": "template <class T> class X;<br>template <struct T> class X;<br>template <typename T> class X;<br>template <int T> class X;<br>",
     "answers": [
       "Az első",
       "A második",
@@ -822,7 +822,7 @@
     "question": "Mi történik az alábbi függvényhíváskor?",
     "hint": "",
     "link": "",
-    "_code": "template &lt;typename T&gt;<br> T max(const T& a, const T& b); <br> max(4.3, 23);",
+    "_code": "template <typename T><br> T max(const T& a, const T& b); <br> max(4.3, 23);",
     "solution": 1,
     "answers": [
       "Mindkét paraméter int-é konvertálódik",
@@ -833,7 +833,7 @@
   },
   {
     "question": "Mennyi a 0x11 konstans értéke?",
-    "hint": "",
+    "hint": "0x jelöli a 16-os (hex) számrendszert. Két helyiérték: 1, 16. <br/>1 * 16 + 1 * 1 = ?",
     "link": "",
     "_code": "",
     "solution": 2,
@@ -846,7 +846,7 @@
   },
   {
     "question": "Mennyi a 0x1A4 konstans értéke?",
-    "hint": "",
+    "hint": "0x jelöli a 16-os (hex) számrendszert. Három helyiérték: 1, 16, 256. <br/>1 * 256 + A * 16 + 4 * 1 = ? (A = 10)",
     "link": "",
     "_code": "",
     "solution": 2,
@@ -929,10 +929,10 @@
     "_code": "",
     "solution": 0,
     "answers": [
-      "struct Foo{ template&lt;bool f&gt; void bar() const {//...} }; Foo f; f.bar&lt;true&gt;();",
-      "template &lt;int N&gt; enum A {Elem = N};",
-      "template &lt;typename T&gt; typedef std::set&lt;T, std::greater&lt;T&gt; &gt; GreaterSet;",
-      "template &lt;typename T = int&gt; const T& max(const T& a, const T& b);"
+      "struct Foo{ template<bool f> void bar() const {//...} }; Foo f; f.bar<true>();",
+      "template <int N> enum A {Elem = N};",
+      "template <typename T> typedef std::set<T, std::greater<T> > GreaterSet;",
+      "template <typename T = int> const T& max(const T& a, const T& b);"
     ]
   }
 ]

@@ -13,7 +13,7 @@ import {DeviceService} from '../device.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class AnnouncementComponent implements AfterViewInit {
-  private static VERSION = 23;
+  private static VERSION = 24;
   public announcements: IRibbonAnnouncement[] = [];
   @ViewChild('changelogModal') public changelogModal: ModalDirective;
   public modalText: string;
