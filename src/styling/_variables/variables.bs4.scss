@@ -1,0 +1,41 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+//@import "~bootstrap/scss/bootstrap";
+
+$theme-colors: (
+  "primary": #f90,
+  "info": $info,
+  "dark": #0d0f00,
+  "secondary": #afafaf
+);
+
+$font-family-sans-serif: "titillium", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+$font-family-base: $font-family-sans-serif;
+$headings-font-weight: 300;
+
+$body-bg: theme-color("dark");
+
+$padding-leftright: 0.6rem;
+$padding-topbottom: 0.6rem;
+$info: lighten(theme-color("dark"), 50%);
+
+$dropdown-divider-bg: lighten(theme-color("dark"), 5%);
+$dropdown-link-active-bg: darken(theme-color("primary"), 10%);
+$dropdown-link-active-color: theme-color("dark");
+$dropdown-link-hover-bg: darken(theme-color("primary"), 8%);
+$dropdown-link-hover-color: theme-color("dark");
+
+$link-color: theme-color("primary");
+$link-hover-color: darken($primary, 10%);
+$code-color: theme-color("primary");
+$pre-color: theme-color("primary");
+
+$toolbar-height: 2.6rem;
+$loading-decorator-base-size: 5rem;
+$scrollbar-size: 0.6rem;
+$progress-knob-size: 2rem;

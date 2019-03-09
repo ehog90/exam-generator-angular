@@ -1,0 +1,89 @@
+@import "../_variables/variables.nontheme";
+
+::-webkit-scrollbar {
+  width: $scrollbar-size;
+  height: $scrollbar-size;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+@mixin menu-scrollbar($color, $shadow-size) {
+  &::-webkit-scrollbar {
+    width: $shadow-size;
+    height: $shadow-size;
+  }
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: darken($color, 10%);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: darken($color, 20%);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: darken($color, 25%);
+  }
+  &::-webkit-resizer {
+    background: darken($color, 25%);
+    border-bottom-right-radius: 100%;
+  }
+}
+
+@mixin primary-coloured-scrollbar($size : $scrollbar-size) {
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: darken(theme-color("primary"), 10%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: darken(theme-color("primary"), 20%);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: darken(theme-color("primary"), 25%);
+  }
+  ::-webkit-resizer {
+    background: darken(theme-color("primary"), 25%);
+    border-bottom-right-radius: 100%;
+  }
+}
+
+@mixin dark-scrollbar-invisible($size : $scrollbar-size) {
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: lighten(theme-color("dark"), 15%);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten(theme-color("dark"), 20%);
+  }
+  ::-webkit-resizer {
+    background: lighten(theme-color("dark"), 20%);
+    border-bottom-right-radius: 100%;
+  }
+
+}
+
+@include primary-coloured-scrollbar(0.6rem);

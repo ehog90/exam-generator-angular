@@ -1,0 +1,69 @@
+<div class="wrapper">
+  <nav class="navbar fixed-top bg-primary text-dark">
+    <div class="container-fluid">
+      <div
+        class="header-main d-flex justify-content-between"
+        (click)="toggleSidebar()"
+        data-toggle="collapse"
+        style="width: 100%"
+        data-target="#top-bar"
+        aria-expanded="false"
+        aria-controls="top-bar"
+      >
+        <button
+          class="hamburger-menu"
+          type="button"
+          id="sidebar-cls"
+          (click)="toggleSidebar()"
+          data-toggle="collapse"
+          data-target="#top-bar"
+          aria-expanded="false"
+          aria-controls="top-bar"
+        >
+          <svg
+            class="hamburger"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+          >
+            <path d="M3.5 13.5h57v4h-57zM3.5 46.5h57v4h-57z" />
+            <g><path d="M3.5 30h57v4h-57z" /></g>
+          </svg>
+        </button>
+        <a
+          class="navbar-brand d-flex align-items-center"
+          (click)="$event.stopPropagation(); "
+        >
+        </a>
+      </div>
+    </div>
+  </nav>
+  <nav id="sidebar">
+    <div
+      class="sidebar-header d-flex align-items-center justify-content-between"
+    ></div>
+    <ul class="list components">
+      <p>
+        Menü
+      </p>
+      <li>
+        <a [routerLink]="['free-search']">
+          <i class="glyph szemlelet-magnifier" aria-hidden="true"></i>
+          <span class="menu-item-text">Keresés</span>
+        </a>
+      </li>sd
+      <li>
+        <a [routerLink]="['all-files']">
+          <i class="glyph szemlelet-files" aria-hidden="true"></i>
+          <span class="menu-item-text">Fájlok</span></a>
+      </li>
+      <li>
+        <a [routerLink]="['public-reports']">
+          <i class="glyph szemlelet-bug-simple" aria-hidden="true"></i>
+          <span class="menu-item-text">Hibajegyzék</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div id="content"><router-outlet></router-outlet></div>
+</div>
+<div class="overlay"></div>

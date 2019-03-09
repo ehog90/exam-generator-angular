@@ -72,7 +72,7 @@
     "solution": 0,
     "answers": [
       "Az automatikus változók a stack-en jönnek létre.",
-      "Az automatikus vltozók a statikus tárterületen jönnek létre.",
+      "Az automatikus változók a statikus tárterületen jönnek létre.",
       "Az automatikus változók a winchester-en jönnek létre.",
       "Az automatikus változók a heap-en jönnek létre."
     ]

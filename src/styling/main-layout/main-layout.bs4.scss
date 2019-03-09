@@ -1,0 +1,84 @@
+@import "../styling/scrollbar/scrollbar.nontheme";
+
+svg.logo {
+  .st0 {
+    fill: #3c4248;
+  }
+}
+nav {
+  &.navbar {
+    &.fixed-top {
+      box-shadow: 0 0 .75rem darken(black, 10%);
+    }
+  }
+}
+
+#sidebar {
+  $shadow-size: 0.2rem;
+  @include menu-scrollbar(theme-color("primary"), $shadow-size);
+  background: theme-color("primary");
+  color: theme-color("dark");
+  box-shadow: $shadow-size $shadow-size $shadow-size rgba(0, 0, 0, 0.2);
+  & > .sidebar-header {
+    & > button {
+      color: lighten(theme-color("dark"), 10%);
+    }
+  }
+
+  & ul.components {
+    border-bottom: 1px solid theme-color("dark");
+
+    & > p {
+      color: theme-color("dark");
+    }
+    & > li {
+      & > a {
+        color: theme-color("dark");
+
+        &:hover {
+          color: theme-color("primary");
+          background: lighten(theme-color("dark"), 7%);
+        }
+      }
+      &.active {
+        & > a,
+        & > a[aria-expanded="true"] {
+          color: theme-color("primary");
+          background: theme-color("dark");
+        }
+      }
+    }
+  }
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 1200px) {
+
+  #sidebar {
+    $shadow-size: 0.2rem;
+    @include menu-scrollbar(lighten(theme-color("dark"), 25%), $shadow-size);
+    background: theme-color("dark");
+    color: theme-color("primary");
+    & ul.components {
+      border-bottom: 1px solid lighten(theme-color("dark"), 10%);
+      & > p {
+        color: theme-color("primary");
+      }
+      & > li {
+        & > a {
+          color: theme-color("primary");
+        }
+      }
+    }
+  }
+}
+
+svg {
+  &.hamburger {
+    path {
+      fill: theme-color("dark");
+    }
+  }
+}

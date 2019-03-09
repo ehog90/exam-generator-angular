@@ -1,0 +1,167 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "exam-generator-angular": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "polyfills": "src/polyfills.ts",
+            "assets": [
+              "src/.htaccess",
+              "src/styles",
+              "src/fonts",
+              "src/glyphs",
+              "src/assets",
+              "src/mocks",
+              "src/php",
+              "src/files",
+              "src/data",
+              "src/other"
+            ],
+            "styles": [
+              "src/fonts/stylesheet.css",
+              "src/glyphs/css/szemlelet-sans.css",
+              "src/styling/bs4-theme.scss"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.slim.js",
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "src/assets/js/nav-fix.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "exam-generator-angular:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "exam-generator-angular:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "exam-generator-angular:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "karmaConfig": "./karma.conf.js",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/web-animations-js/web-animations.min.js",
+              "src/assets/js/jquery.bootstrap-autohidingnavbar.min.js",
+              "src/assets/js/nav-fix.js"
+            ],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles/ehog-orange-green-theme.css",
+              "src/styles/ie10-viewport-bug-workaround.css",
+              "src/styles/loading-bar.css",
+              "src/styles/overrides.css",
+              "src/fonts/stylesheet.css",
+              "src/glyphs/css/szemlelet-sans.css"
+            ],
+            "assets": [
+              "src/.htaccess",
+              "src/styles",
+              "src/fonts",
+              "src/glyphs",
+              "src/assets",
+              "src/mocks",
+              "src/php",
+              "src/files",
+              "src/data",
+              "src/other"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "exam-generator-angular-e2e": {
+      "root": "e2e",
+      "sourceRoot": "e2e",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "./protractor.conf.js",
+            "devServerTarget": "exam-generator-angular:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "exam-generator-angular",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "regor",
+      "styleext": "scss"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "regor"
+    }
+  }
+}

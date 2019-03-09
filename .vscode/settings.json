@@ -1,0 +1,6 @@
+{
+  "tslint.autoFixOnSave": true,
+  "tslint.configFile": "tslint.json",
+  "prettier.arrowParens": "always",
+  "html.format.endWithNewline": true
+}

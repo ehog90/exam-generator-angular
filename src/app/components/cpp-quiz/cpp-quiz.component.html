@@ -1,0 +1,157 @@
+<regor-page-header title="C++ Beugró kvíz" img="cpp"></regor-page-header>
+<regor-busy-monitor #busyMonitor>
+  <div class="row">
+    <div class="col-md-1 strong">
+      Átlag
+    </div>
+    <div class="col-md-11">
+      <div class="progress">
+        <!--<bs-progress [max]="scores?.all"
+                     *ngIf="scores && (scores?.scorePassed + scores?.scoreFailed + scores?.scoreNeutral)">
+          <bar [value]="scores?.scorePassed" type="success">
+            <span>{{scores?.scorePassed}}</span>
+          </bar>
+          <bar [value]="scores?.scoreFailed" type="danger">
+            <span>{{scores?.scoreFailed}}</span>
+          </bar>
+        </bs-progress>-->
+      </div>
+      <div
+        *ngIf="
+          !(scores?.scorePassed + scores?.scoreFailed + scores?.scoreNeutral)
+        "
+      >
+        Nincs kitöltés.
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1 strong">
+      Kitöltés:
+    </div>
+    <div class="col-md-11">
+      <div class="progress">
+        <!--<bs-progress [max]="questions?.length" *ngIf="questions">
+          <bar [value]="questionsAnswered?.correct" type="success">
+            <span *ngIf="questionsAnswered.correct != 0">{{questionsAnswered?.correct}}</span>
+          </bar>
+          <bar [value]="questionsAnswered?.wrong" type="danger">
+            <span *ngIf="questionsAnswered.wrong != 0">{{questionsAnswered?.wrong}}</span>
+          </bar>
+        </bs-progress>-->
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div
+        *ngIf="
+          !(
+            currentQuestion?.question.solution == undefined ||
+            currentQuestion?.question.solution == '#'
+          )
+        "
+      >
+        Eddigi hibás próba ennél a kérdésnél:
+        <span class="badge">{{ currentQuestion?.tryouts }}</span>
+      </div>
+      <div
+        *ngIf="
+          currentQuestion != null &&
+          (currentQuestion?.question.solution == undefined ||
+            currentQuestion?.question?.solution === '#')
+        "
+      >
+        <div class="alert alert-danger" role="alert">
+          Ehhez a kérdéshez nincs megadva helyes válasz, ezért nincs értékelve.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      Összes hibás próbálkozás:
+      <span class="badge">{{ questionsAnswered?.allTryouts }}</span>
+    </div>
+  </div>
+  <hr />
+  <div *ngIf="isFinished == false">
+    <div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+      <div class="col-md-6">
+        <h3>{{ currentQuestion?.question.question }}</h3>
+
+        <div
+          class="src-code"
+          [innerHTML]="currentQuestion.question._code"
+        ></div>
+        <div style="margin-top: 5px; margin-bottom: 5px;">
+          <div
+            class="radio radio-primary"
+            *ngFor="
+              let answer of currentQuestion?.question.answers;
+              let i = index
+            "
+          >
+            <input
+              type="radio"
+              name="opt_{{ i }}"
+              id="opt_{{ i }}"
+              [value]="i"
+              [(ngModel)]="currentQuestion.question.answerNumber"
+            />
+            <label for="opt_{{ i }}">
+              {{ answer }}
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div *ngIf="currentQuestion.showHint">
+          <div class="alert alert-danger" role="alert">
+            <h4>Ezt most elrontottad, Gondolkozz még egy kicsit.</h4>
+
+            <div
+              [innerHTML]="currentQuestion.question.hint"
+              style="font-style: italic"
+            ></div>
+            <a
+              class="btn btn-primary"
+              [href]="currentQuestion.question.link"
+              *ngIf="currentQuestion.question.link"
+              target="_blank"
+              >Bővebben</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 25px;">
+      <div class="col-md-12">
+        <button
+          class="btn btn-default"
+          (click)="next()"
+          [disabled]="currentQuestion.question.answerNumber == undefined"
+        >
+          Következő
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isFinished">
+    <div class="row" style="margin-top: 5px; margin-bottom: 25px;">
+      <div class="col-md-12">
+        <h3>Végeztél.</h3>
+
+        <p *ngIf="questionsAnswered.correct > questionsAnswered.wrong">
+          Az eredményed alapján átmennél.
+        </p>
+
+        <p *ngIf="questionsAnswered.correct == questionsAnswered.wrong">
+          Az eredményed alapján éppen, hogy átmennél.
+        </p>
+
+        <p *ngIf="questionsAnswered.correct < questionsAnswered.wrong">
+          Az eredményed alapján megbuknál.
+        </p>
+      </div>
+    </div>
+  </div>
+</regor-busy-monitor>
